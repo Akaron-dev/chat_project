@@ -1,17 +1,21 @@
 import socket
 import threading
 from _thread import start_new_thread
+from libserver import *
 lock = threading.Lock()
 
 
 def process_request(communication_socket):
     while True:
-        data = communication_socket.recv(2048)
+        data = ''
+        data = (communication_socket.recv(2048)).decode('utf-8')
         if not data:
             print('bye')
             lock.release()
             break
-        communication_socket.send(data[::-1])
+        header, msg = data_to_msg(str(data))
+        communication_socket.send(f'Recieved {msg}'.encode('utf-8'))
+        communication_socket.send(f'Transmitting {msg} to {header}'.encode('utf-8'))
     communication_socket.close()
 
 
