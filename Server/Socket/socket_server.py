@@ -16,6 +16,7 @@ def process_request(communication_socket):
         header, msg = data_to_msg(str(data))
         communication_socket.send(f'Recieved {msg}'.encode('utf-8'))
         communication_socket.send(f'Transmitting {msg} to {header}'.encode('utf-8'))
+        print(msg)
     communication_socket.close()
 
 
@@ -33,3 +34,4 @@ def server_main():
 
 
 server_main()
+
