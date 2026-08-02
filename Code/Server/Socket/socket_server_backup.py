@@ -1,36 +1,40 @@
 import socket
 import threading
-from _thread import start_new_thread
-from libserver import *
-lock = threading.Lock()
+
+def run_server():
+    host_ip = '127.0.0.1'
+    host_port = 7567
+    try:
+        server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        server.bind((host_ip, host_port))
+        server.listen()
+
+        while True:
+            client_socket, client_address = server.accept()
+            thread = threading.Thread(target = handle_client, args = (client_socket, client_address,))
+            thread.start()
+    except Exception as e:
+        print(f'Error: {e}')
+    finally:
+        server.close()
+   
+
+def handle_client(client_socket, client_address):
+    try:
+        while True:
+            request = client_socket.recv(2048).decode('utf-8')
+            if request.lower() == 'close':
+                client_socket.send('Closed'.encode('utf-8'))
+                break
+            print(f'Recieved: {request}')
+            response = 'Accepted'
+            client_socket.send(response.encode('utf-8'))
+    except Exception as e:
+        print(f'Error when handling {e}')
+    finally:
+        client_socket.close()
+        
 
 
-def process_request(communication_socket):
-    while True:
-        data = ''
-        data = (communication_socket.recv(2048)).decode('utf-8')
-        if not data:
-            print('bye')
-            lock.release()
-            break
-        header, msg = data_to_msg(str(data))
-        communication_socket.send(f'Recieved {msg}'.encode('utf-8'))
-        communication_socket.send(f'Transmitting {msg} to {header}'.encode('utf-8'))
-        print(msg)
-    communication_socket.close()
 
-
-def server_main():
-    HOST = ''
-    PORT = 7567
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.bind((HOST, PORT))
-    s.listen(5)
-    while True:
-        communication_socket, address = s.accept()
-        lock.acquire()
-        print(f'Connected to {address[0]}:{address[1]}')
-        start_new_thread(process_request, (communication_socket))
-
-
-server_main()
+run_server() 

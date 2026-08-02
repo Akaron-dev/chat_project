@@ -1,35 +1,40 @@
 import socket
 import threading
-import sys
-import libserver
-import _thread
 
-class server:
-    
-    def connect(communication_socket):
-        lock = threading.Lock()
+def run_server():
+    host_ip = '127.0.0.1'
+    host_port = 7567
+    try:
+        server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        server.bind((host_ip, host_port))
+        server.listen()
+
         while True:
-            c = communication_socket
-            data = ''
-            data  = c.recv(4096)
-            header, msg = libserver.data_to_msg(data)
-            c.send((f'Recieved message {msg}').encode('utf-8'))
-            if header == 'BREAK':
-                lock.release()
+            client_socket, client_address = server.accept()
+            thread = threading.Thread(target = handle_client, args = (client_socket, client_address,))
+            thread.start()
+    except Exception as e:
+        print(f'Error: {e}')
+    finally:
+        server.close()
+   
+
+def handle_client(client_socket, client_address):
+    try:
+        while True:
+            request = client_socket.recv(2048).decode('utf-8')
+            if request.lower() == 'close':
+                client_socket.send('Closed'.encode('utf-8'))
                 break
-            
-    def main():
-        lock = threading.Lock()
-        host = ''
-        port = 7567
-        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.bind((host, port))
-        s.listen(5)
-        while True:
-            communication_socket, address = s.accept()
-            lock.acquire()
-            print(f'connected to {address}')
-            _thread.start_new_thread(server.connect(communication_socket))
+            print(f'Recieved: {request}')
+            response = 'Accepted'
+            client_socket.send(response.encode('utf-8'))
+    except Exception as e:
+        print(f'Error when handling {e}')
+    finally:
+        client_socket.close()
+        
 
-if __name__ == '__main__':
-    server.main()
+
+
+run_server() 
