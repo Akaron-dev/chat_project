@@ -1,1 +1,2 @@
-intro sockets & tcp: https://www.datacamp.com/tutorial/a-complete-guide-to-socket-programming-in-python?dc_referrer=https%3A%2F%2Fwww.ecosia.org%2F
+intro sockets & threading: https://www.datacamp.com/tutorial/a-complete-guide-to-socket-programming-in-python?dc_referrer=https%3A%2F%2Fwww.ecosia.org%2F
+sqlite db: https://www.youtube.com/watch?v=xaWlS9HtWYw&list=PL-osiE80TeTsKOdPrKeSOp4rN3mza8VHN & https://www.youtube.com/watch?v=pd-0G0MigUA
