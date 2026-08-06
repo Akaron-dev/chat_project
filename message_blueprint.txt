@@ -1,0 +1,3 @@
+msg_to_peer = (100, recipient_id, sender_id, msg, timestamp, sessionkey)
+msg_to_server = (200, sender_id, msg, timestamp, sessionkey)
+
