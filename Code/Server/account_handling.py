@@ -1,5 +1,7 @@
 import sqlite3
 import bcrypt
+import random
+
 
 
 
@@ -10,34 +12,40 @@ import bcrypt
 # connection.commit()
 # connection.close()
 
-def create_account(uid, password):
+def create_account(password):
+    uid = random.randint(1, 999999999)
     connection = sqlite3.connect('data.db')
     cursor = connection.cursor()
-    bytes = password.encode('utf-8')
+    password_bytes = password.encode('utf-8')
     salt = bcrypt.gensalt()
-    hash = bcrypt.hashpw(bytes, salt)
-    cursor.execute("INSERT INTO users VALUES (?, ?, ?)",
-                   (uid, hash.decode('utf-8'), salt.decode('utf-8'))
+    password_hash = bcrypt.hashpw(password_bytes, salt)
+    cursor.execute("INSERT INTO users VALUES (?, ?, NULL)",
+                   (uid, password_hash.decode('utf-8'))
                     )
     connection.commit()
     connection.close()
+    return uid
 
 # create_account(1, 'Test123456')
 
 def login(uid, password):
     connection = sqlite3.connect('data.db')
     cursor = connection.cursor()
-    bytes = password.encode('utf-8')
     cursor.execute("SELECT * FROM users WHERE user_id = ?", (uid,))
-    user_data = cursor.fetchall()
-    hash_true, salt = user_data[0][1], user_data[0][2]
-    salt_bytes = salt.encode('utf-8')
-    hash = bcrypt.hashpw(bytes, salt_bytes)
-    if hash.decode('utf-8') == hash_true:
+    user_data = cursor.fetchone()
+    if not user_data:
+        return ('wrong password or username')
+    stored_hash = user_data[1]
+    if bcrypt.checkpw(password.encode('utf-8'), stored_hash.encode('utf-8')):
         print('Login successfull')
-        return True
+        sessionkey = random.randint(1, 999999999)
+        cursor.execute("UPDATE users SET sessionkey = ? WHERE user_id = ?", (sessionkey, uid))
+        connection.commit()
+        connection.close()
+        return ('Login successful, this is your sessionkey', sessionkey)
     else:
-        print('wrong password or username')
+        connection.close()
+        return ('wrong password or username')
 
 
-# login(1, 'Test123456')
+# print(login(1, 'Test123456'))

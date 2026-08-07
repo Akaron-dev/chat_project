@@ -1,3 +1,6 @@
-msg_to_peer = (100, recipient_id, sender_id, msg, timestamp, sessionkey)
-msg_to_server = (200, sender_id, msg, timestamp, sessionkey)
-
+msg_to_peer = (200, recipient_id, sender_id, msg, timestamp, sessionkey)
+msg_to_server = (100, uid, msg, timestamp, sessionkey)
+msg_for_login = (0, uid, msg, timestamp):
+    For registration uid = None
+    msg = password
+    
