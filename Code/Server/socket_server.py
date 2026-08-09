@@ -2,6 +2,7 @@ import socket
 import threading
 import json
 import account_handling
+import sqlite3
 
 def run_server():
     host_ip = '127.0.0.1'
@@ -29,28 +30,40 @@ def handle_client(client_socket, client_address):
                 break
             json_string = raw_bytes.decode('utf-8')
             data = json.loads(json_string)
-            msg_type = data.get('msg_type')
-            recipient_id = data.get('recipient_id')
-            uid = data.get('uid')
+            msg_type = int(data.get('msg_type'))
+            receipient_id = int(data.get('receipient_id'))
+            uid = int(data.get('uid'))
             msg_content = data.get('msg_content')
-            timestamp = data.get('timestamp')
-            sessionkey = data.get('sessionkey')
+            timestamp = int(data.get('timestamp'))
+            sessionkey = int(data.get('sessionkey'))
             print(data)
-            if msg_type == '0':
+            if msg_type == 0: # login related
                 if uid == 0:
                     new_uid = account_handling.create_account(msg_content)
-                    response = f'Your user id is: {new_uid}'
+                    response = new_uid
                     client_socket.send(response.encode('utf-8'))
                 else:
-                    message, sessionkey = account_handling.login(uid, msg_content)
-                    response = message + ' ' + str(sessionkey)
+                    sessionkey = account_handling.login(uid, msg_content)
+                    response = str(sessionkey)
                     client_socket.send(response.encode('utf-8'))
-            if msg_type == '100':
+            if msg_type == 100: # status to server
                 if msg_content.lower() == 'close':
                     response = 'Connection closed'
                     client_socket.send(response.encode('utf-8'))
                     break
-            # print(msg_type, recipient_id, uid, msg_content, timestamp, sessionkey)
+            if msg_type == 200: # Message to another user
+                receipient_id = int(receipient_id)
+                if account_handling.sessionkey_verification(uid, sessionkey) == True:
+                    connection = sqlite3.connect('data.db')
+                    cursor = connection.cursor()
+                    cursor.execute('INSERT INTO messages VALUES (?, ?, ?, ?, ?)',
+                                    (msg_type, receipient_id, uid, msg_content, timestamp)
+                                   )
+                    connection.commit()
+                    connection.close()
+                    response = f'Message to {receipient_id} sent successfully'
+                else:
+                    response = 'Not authorized, login required'
             client_socket.send(response.encode('utf-8'))
     except Exception as e:
         print(f'Error when handling {e}')

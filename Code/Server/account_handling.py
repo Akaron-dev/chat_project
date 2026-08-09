@@ -31,7 +31,7 @@ def create_account(password):
 def login(uid, password):
     connection = sqlite3.connect('data.db')
     cursor = connection.cursor()
-    cursor.execute("SELECT * FROM users WHERE user_id = ?", (uid,))
+    cursor.execute("SELECT * FROM users WHERE uid = ?", (uid,))
     user_data = cursor.fetchone()
     if not user_data:
         return ('wrong password or username')
@@ -39,13 +39,26 @@ def login(uid, password):
     if bcrypt.checkpw(password.encode('utf-8'), stored_hash.encode('utf-8')):
         print('Login successfull')
         sessionkey = random.randint(1, 999999999)
-        cursor.execute("UPDATE users SET sessionkey = ? WHERE user_id = ?", (sessionkey, uid))
+        cursor.execute("UPDATE users SET sessionkey = ? WHERE uid = ?", (sessionkey, uid))
         connection.commit()
         connection.close()
-        return ('Login successful, this is your sessionkey', sessionkey)
+        return sessionkey
     else:
         connection.close()
-        return ('wrong password or username')
+        return 0
+
+def sessionkey_verification(uid, sessionkey):
+    connection = sqlite3.connect('data.db')
+    cursor = connection.cursor()
+    cursor.execute('SELECT * FROM users WHERE uid = ?', (uid,))
+    user_data = cursor.fetchone()
+    if sessionkey == user_data[2]:
+        connection.close()
+        return True
+    else:
+        connection.close()
+        return False
+
 
 
 # print(login(1, 'Test123456'))
