@@ -1,3 +1,4 @@
 intro sockets & threading: https://www.datacamp.com/tutorial/a-complete-guide-to-socket-programming-in-python?dc_referrer=https%3A%2F%2Fwww.ecosia.org%2F
 sqlite db: https://www.youtube.com/watch?v=byHcYRpMgI4, https://www.sqlite.org
 passwordhashing: https://www.infobip.com/glossary/password-hashing
+https://tkdocs.com/tutorial/
