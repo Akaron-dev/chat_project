@@ -38,20 +38,21 @@ ttk.Entry(chat_box, width=50, font=message_font).grid(column=1, row=3, sticky=(W
 ttk.Label(message_box, text="Hoi", font=message_font).grid(column=1, row=1, sticky=(W))
 ttk.Label(message_box, text="Hoi Zrugg", font=message_font).grid(column=1, row=2, sticky=(E))
 
-chat_list = ttk.Frame(mainframe, width=200)
+chat_list = ttk.Frame(mainframe, width=200, padding= 7)
 chat_list.grid(column=2, row=2, sticky=(N, W, E, S))
 chat_list.columnconfigure(1, weight=1)
 
-ttk.Label(chat_list, text="Chats", font=("TkDefault", 16, "bold")).grid(column=1, row=1, sticky=(N, W, E, S))
+ttk.Label(chat_list, text="Chats", font=("TkDefault", 16, "bold"), padding=5).grid(column=1, row=1, sticky=(N, W, E, S))
+
+style = ttk.Style()
+style.configure("Chat_Button.TButton", font=("Helvetica", 14, "normal"), width=20, anchor="w", padding=3)
 
 # Load Chats
-chat1 = ttk.Frame(chat_list, borderwidth=1, relief="solid")
+chat1 = ttk.Button(chat_list, text="Chat 1", style="Chat_Button.TButton")
 chat1.grid(column=1, row=2, sticky=(W))
-ttk.Label(chat1, text="Chat 1", font=message_font).grid(column=1, row=1, sticky=(W))
 
-chat2 = ttk.Frame(chat_list, borderwidth=1, relief="solid")
+chat2 = ttk.Button(chat_list, text="Chat 2", style="Chat_Button.TButton")
 chat2.grid(column=1, row=3, sticky=(W))
-ttk.Label(chat2, text="Chat 2", font=message_font).grid(column=1, row=1, sticky=(W))
 
 
 
