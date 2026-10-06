@@ -41,7 +41,13 @@ def open_chat(chat_uid):
     for child in message_box.winfo_children():
         child.destroy()
     ttk.Label(chat_box, textvariable=chat_username, font=user_font).grid(column=1, row=1, sticky=(N, W, E, S))
-    get_messages(chat_uid)
+    if chat_uid in get_chats():
+        get_messages(chat_uid)
+    else:
+        # Create new chat
+        ttk.Label(message_box, text="No messages yet", font=message_font).grid(column=1, row=1, sticky=(N, W, E, S))
+    chat_entry.grid(column=1, row=3, sticky=(W, E))
+    chat_entry.focus()
 
 def get_chats() :
     chats = ["Bastian", "Lukas", "Felix"]
@@ -62,22 +68,51 @@ def get_messages(chat_uid):
 
 def check_login(own_uid, own_password):
     # Get UID and Password from server
+    attempts = 0
     if own_uid == "Bernard" and own_password == "7567":
         login_frame.grid_forget()
         mainframe.grid(column=0, row=0, sticky=(N, W, E, S))
-        chat_entry.focus()
         own_username.set(own_uid)
-        ttk.Label(mainframe, text="Logged in as: " + own_username.get(), font=user_font, padding=(0,0,0,5)).grid(column=1, row=1, sticky=(W))
+        own_userstring.set("Logged in as: " + own_uid)
+        get_users()
+        logged_in_as = ttk.Label(mainframe, textvariable=own_userstring, font=user_font, padding=(0,0,0,5))
+        logged_in_as.grid(column=1, row=1, sticky=(W))
+        bad_login.grid_forget()
 
     elif own_uid == "Tim" and own_password == "1234":
         login_frame.grid_forget()
         mainframe.grid(column=0, row=0, sticky=(N, W, E, S))
-        chat_entry.focus()
         own_username.set(own_uid)
-        # Logged in as
-        ttk.Label(mainframe, text="Logged in as: " + own_username.get(), font=user_font, padding=(0,0,0,5)).grid(column=1, row=1, sticky=(W))
-    else:
-        ttk.Label(login_window, text="Wrong Username or Password", font=("TkDefault", 10, "bold"), foreground="red").grid(column=0, row=6, columnspan=2)
+        own_userstring.set("Logged in as: " + own_uid)
+        get_users()
+        logged_in_as = ttk.Label(mainframe, textvariable=own_userstring, font=user_font, padding=(0,0,0,5))
+        logged_in_as.grid(column=1, row=1, sticky=(W))
+        bad_login.grid_forget()
+
+    elif attempts < 1:
+        bad_login.grid(column=0, row=6, columnspan=2)
+        attempts += 1
+
+
+def logout():
+    mainframe.grid_forget()
+    login_frame.grid(column=0, row=0, sticky=(N, W, E, S))
+    own_username.set("")
+    own_userstring.set("")
+    login_entry.delete(0, END)
+    password_entry.delete(0, END)
+    login_entry.focus()
+    root.destroy()
+    root.mainloop()
+
+
+def get_users():
+    # Get Users
+    users = ["Bernard", "Bastian", "Lukas", "Felix", "Tim"]
+    users.remove(own_username.get()) 
+    for i in range(len(users)):
+        user1 = ttk.Button(Userlist_box, text=users[i],command=lambda u=users[i]: open_chat(u), style="Chat_Button.TButton")
+        user1.grid(column=1, row=i+2, sticky=(N, W))
 
 root = Tk()
 root.title("PY Chat")
@@ -87,6 +122,7 @@ root.rowconfigure(0, weight=1)
 
 own_username = StringVar()
 chat_username = StringVar()
+own_userstring = StringVar()
 
 # Fonts
 fat_font = ("TkDefault", 24, "bold")
@@ -120,6 +156,7 @@ password_entry.grid(column=0, row=4, columnspan=2)
 ttk.Button(login_window, text="Sign Up", style="Login_Button.TButton").grid(column=0, row=5, pady=7)
 login_button = ttk.Button(login_window, text="Log In", style="Login_Button.TButton", command=lambda: check_login(login_entry.get(), password_entry.get()))
 login_button.grid(column=1, row=5, pady=7)
+bad_login = ttk.Label(login_window, text="Wrong Username or Password", font=("TkDefault", 10, "bold"), foreground="red")
 
 #Changable Button
 Option_button = ttk.Button(mainframe, text="Options", command=open_menu)
@@ -157,11 +194,6 @@ Userlist_box.rowconfigure(2, weight=1)
 
 ttk.Label(Userlist_box, text="Users", font=("TkDefault", 16, "bold"), padding=(5,5,5,5)).grid(column=1, row=1, sticky=(N, W))
 
-#Get Users
-ttk.Button(Userlist_box, text="Bernard", style="Chat_Button.TButton").grid(column=1, row=2, sticky=(N, W))
-ttk.Button(Userlist_box, text="Bastian", style="Chat_Button.TButton").grid(column=1, row=3, sticky=(N, W))
-ttk.Button(Userlist_box, text="Tim", style="Chat_Button.TButton").grid(column=1, row=4, sticky=(N, W))
-
 #Credits
 Credits_box = ttk.Frame(Options_box, width=500)
 Credits_box.columnconfigure(1, weight=1)    
@@ -177,8 +209,6 @@ ttk.Label(Credits_box, text="Felix Angerer, Silas Roth", font=message_font, padd
 
 # Send message 
 chat_entry = ttk.Entry(chat_box, width=50, font=message_font)
-chat_entry.grid(column=1, row=3, sticky=(W, E))
-chat_entry.focus()
 
 #Second Column
 Column_two = ttk.Frame(mainframe, width=200, padding= 0)
@@ -209,8 +239,8 @@ ttk.Label(menu_list, text="Options", font=("TkDefault", 16, "bold"), padding=(5,
 ttk.Button(menu_list, text="Settings", style="Chat_Button.TButton", command=open_settings).grid(column=1, row=2, sticky=(W))
 ttk.Button(menu_list, text="Find User", style="Chat_Button.TButton", command=open_userlist).grid(column=1, row=3, sticky=(W))
 ttk.Button(menu_list, text="Credits", style="Chat_Button.TButton", command=open_credits).grid(column=1, row=4, sticky=(W))
-ttk.Button(menu_list, text="Logout", style="Chat_Button.TButton").grid(column=1, row=5, sticky=(W))
+ttk.Button(menu_list, text="Logout", style="Chat_Button.TButton", command=logout).grid(column=1, row=5, sticky=(W))
 
 login_entry.focus()
-login_frame.bind('<Return>', lambda event: login_button.invoke())
+root.bind('<Return>', lambda event: login_button.invoke())
 root.mainloop()
