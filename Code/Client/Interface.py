@@ -22,12 +22,18 @@ def open_settings():
     Options_box.grid(column=1, row=2, sticky=(N, W, E, S))
     Settings_box.grid(column=1, row=1, sticky=(N, W, E, S))
 
-def open_userlist():
+def open_add_contact():
     chat_box.grid_forget()
     for child in Options_box.winfo_children():
         child.grid_forget()
-    Options_box.grid(column=1, row=2, sticky=(N, W, E, S))
-    Userlist_box.grid(column=1, row=1, sticky=(N, W, E, S))
+    Options_box.grid(column=1, row=2, sticky=(N, S, E, W))
+    newcontact_box.grid(column=1, row=1)
+    not_filled.grid_forget()
+    already_exists.grid_forget()
+    no_exist.grid_forget()
+    name_entry.delete(0,END)
+    uid_entry.delete(0,END)
+    uid_entry.focus()
 
 def open_credits():
     chat_box.grid_forget()
@@ -98,7 +104,6 @@ def check_login(own_uid, own_password):
         own_userstring.set("Logged in as: " + own_uid)
         login_entry.delete(0, END)
         password_entry.delete(0, END)
-        get_users_if()
         build_chats()
         root.bind('<Return>', lambda event: send_message_if())
         logged_in_as = ttk.Label(mainframe, textvariable=own_userstring, font=user_font, padding=(0,0,0,5))
@@ -112,7 +117,6 @@ def check_login(own_uid, own_password):
         own_userstring.set("Logged in as: " + own_uid)
         login_entry.delete(0, END)
         password_entry.delete(0, END)
-        get_users_if()
         build_chats()
         logged_in_as = ttk.Label(mainframe, textvariable=own_userstring, font=user_font, padding=(0,0,0,5))
         logged_in_as.grid(column=1, row=1, sticky=(W))
@@ -131,7 +135,13 @@ def logout():
     own_userstring.set("")
     chat_username.set("")
     open_chat_uid.set("")
+    not_filled.grid_forget()
+    already_exists.grid_forget()
+    no_exist.grid_forget()
+    name_entry.delete(0,END)
+    uid_entry.delete(0,END)
     chat_entry.delete(0, END)
+    Options_box.grid_forget()
     root.bind('<Return>', lambda event: login_button.invoke())
     for child in message_box.winfo_children():
         child.destroy()
@@ -140,20 +150,6 @@ def logout():
             child.ungrid()
     open_chats()
     login_entry.focus()
-
-def get_users_if():
-    #get_users()
-    # Remove this !!!
-    all_users = [("Bernard","75677567"), ("Bastian","33973397"), ("Lukas","12345678"), ("Felix","98765432"), ("Tim","19283746")]
-    for child in Userlist_box.winfo_children():
-        if isinstance(child, ttk.Button):
-            child.destroy()
-    other_users = [user for user in all_users if user[0] != own_username.get()]
-    for i, user in enumerate(other_users):
-        username = user[0]
-        uid = user[1]
-        user1 = ttk.Button(Userlist_box, text=username,command=lambda u=user: open_chat(u), style="Chat_Button.TButton")
-        user1.grid(column=1, row=i+2, sticky=(N, W))
 
 def sign_up_if(new_username, new_password, invite_code):
     attempts = 0
@@ -164,7 +160,7 @@ def sign_up_if(new_username, new_password, invite_code):
         return
     #remove this !!!!!
     signup_status = 1
-    # sign_up(new_username, new_password, invite_code)
+    #signup_status = sign_up(new_username, new_password, invite_code)
     if signup_status == 1 :
         signup_window.grid_forget()
         success_window.grid(column=0, row=0)
@@ -213,6 +209,35 @@ def send_message_if(outgoing_message, recipient):
     print("message sent")
     chat_entry.focus()
 
+def add_contact_if(uid, Nickname):
+    # Remove this !!!
+    add_status = 3
+    attempts = 0
+    #add_status = add_contact(uid, Nickname)
+    if uid == "" or Nickname == "" :
+        not_filled.grid_forget()
+        already_exists.grid_forget()
+        no_exist.grid_forget()
+        not_filled.grid(column=1, row=8, columnspan=2)
+        return
+    #add_status = add_contact(uid, Nickname)
+    if add_status == 1 :
+        usertuple = (Nickname,uid)
+        not_filled.grid_forget()
+        already_exists.grid_forget()
+        no_exist.grid_forget()
+        open_chat(usertuple)
+        name_entry.delete(0,END)
+        uid_entry.delete(0,END)
+    elif add_status == 2 and attempts < 1:
+        not_filled.grid_forget()
+        no_exist.grid_forget()
+        already_exists.grid(column=1, row=8, columnspan=2)
+    elif add_status == 3 :
+        not_filled.grid_forget()
+        already_exists.grid_forget()
+        no_exist.grid_forget()
+        no_exist.grid(column=1, row=8, columnspan=2)
 
 root = Tk()
 root.title("PY Chat")
@@ -262,7 +287,7 @@ bad_login = ttk.Label(login_window, text="Wrong Username or Password", font=("Tk
 signup_window = ttk.Frame(login_frame, width=500, borderwidth=1, relief="solid", padding= 4)
 
 ttk.Label(signup_window, text="Sign Up", font=fat_font, padding=5).grid(column=0, row=0, columnspan=2)
-ttk.Label(signup_window, text="Username", font=user_font, padding=5).grid(column=0, row=1, columnspan=2)
+ttk.Label(signup_window, text="UID", font=user_font, padding=5).grid(column=0, row=1, columnspan=2)
 signup_entry = ttk.Entry(signup_window, width=20, font=message_font)
 signup_entry.grid(column=0, row=2, columnspan=2)
 ttk.Label(signup_window, text="Password", font=user_font, padding=5).grid(column=0, row=3, columnspan=2)
@@ -290,7 +315,7 @@ Chats_button = ttk.Button(mainframe, text="Chats", command=open_chats)
 #First Column
 Options_box = ttk.Frame(mainframe, width=500, borderwidth=1, relief="solid", padding= 4)
 Options_box.columnconfigure(1, weight=1)
-Options_box.rowconfigure(2, weight=1)
+Options_box.rowconfigure(1, weight=1)
 
 chat_box = ttk.Frame(mainframe, width=500, borderwidth=1, relief="solid")
 chat_box.grid(column=1, row=2, sticky=(N, W, E, S)) 
@@ -310,19 +335,27 @@ ttk.Label(Settings_box, text="Settings", font=("TkDefault", 16, "bold"), padding
 
 ttk.Button(Settings_box, text="Setting 1", style="Chat_Button.TButton").grid(column=1, row=2, sticky=(N, W))
 
-#Userlist
-Userlist_box = ttk.Frame(Options_box, width=500)
-Userlist_box.columnconfigure(1, weight=1)
-Userlist_box.rowconfigure(2, weight=1)
+#Add Contact
+newcontact_box = ttk.Frame(Options_box, width=500, padding=10, borderwidth=1, relief="solid")
 
-ttk.Label(Userlist_box, text="Users", font=("TkDefault", 16, "bold"), padding=(5,5,5,5)).grid(column=1, row=1, sticky=(N, W))
+ttk.Label(newcontact_box, text="Add Contact", font=("TkDefault", 16, "bold"), padding=5).grid(column=1, row=1, columnspan=2)
+ttk.Label(newcontact_box, text="UID", font=user_font, padding=5).grid(column=1, row=2, columnspan=2)
+uid_entry = ttk.Entry(newcontact_box, width=20, font=message_font)
+uid_entry.grid(column=1, row=3, columnspan=2)
+ttk.Label(newcontact_box, text="Name", font=user_font, padding=5).grid(column=1, row=4, columnspan=2)
+name_entry = ttk.Entry(newcontact_box, width=20, font=message_font)
+name_entry.grid(column=1, row=5, sticky=(W))
+save_button = ttk.Button(newcontact_box, text="Save", style="Login_Button.TButton", command=lambda: add_contact_if(uid_entry.get(), name_entry.get()))
+save_button.grid(column=1, row=7, pady=7)
+already_exists = ttk.Label(newcontact_box, text="This Contact already exists", font=("TkDefault", 10, "bold"), foreground="red")
+not_filled = ttk.Label(newcontact_box, text="Please enter UID and Name", font=("TkDefault", 10, "bold"), foreground="red")
+no_exist = ttk.Label(newcontact_box, text="This UID doesn't exist", font=("TkDefault", 10, "bold"), foreground="red")
 
 #Credits
 Credits_box = ttk.Frame(Options_box, width=500)
-Credits_box.columnconfigure(1, weight=1)    
-Credits_box.rowconfigure(2, weight=1)
+Credits_box.columnconfigure(1, weight=1)
 
-ttk.Label(Credits_box, text="Credits", font=fat_font, padding=5, anchor="center").grid(column=1, row=1, sticky=(W, E))
+ttk.Label(Credits_box, text="Credits", font=fat_font, padding=5, anchor="center").grid(column=1, row=0, sticky=(W, E))
 ttk.Label(Credits_box, text="Programming :", font=user_font, padding=5, anchor="center").grid(column=1, row=2, sticky=(W, E))
 ttk.Label(Credits_box, text="Bernard Rognon, Tim Frauenfelder", font=message_font, padding=2, anchor="center").grid(column=1, row=3, sticky=(W, E))
 ttk.Label(Credits_box, text="Supervised by :", font=user_font, padding=5, anchor="center").grid(column=1, row=4, sticky=(W, E))
@@ -352,7 +385,7 @@ menu_list.columnconfigure(1, weight=1)
 ttk.Label(menu_list, text="Options", font=("TkDefault", 16, "bold"), padding=(5,0,5,5)).grid(column=1, row=1, sticky=(N, W, E, S))
 
 ttk.Button(menu_list, text="Settings", style="Chat_Button.TButton", command=open_settings).grid(column=1, row=2, sticky=(W))
-ttk.Button(menu_list, text="Find User", style="Chat_Button.TButton", command=open_userlist).grid(column=1, row=3, sticky=(W))
+ttk.Button(menu_list, text="Add Contact", style="Chat_Button.TButton", command=open_add_contact).grid(column=1, row=3, sticky=(W))
 ttk.Button(menu_list, text="Credits", style="Chat_Button.TButton", command=open_credits).grid(column=1, row=4, sticky=(W))
 ttk.Button(menu_list, text="Logout", style="Chat_Button.TButton", command=logout).grid(column=1, row=5, sticky=(W))
 

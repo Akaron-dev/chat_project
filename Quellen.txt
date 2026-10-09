@@ -2,3 +2,5 @@ intro sockets & threading: https://www.datacamp.com/tutorial/a-complete-guide-to
 sqlite db: https://www.youtube.com/watch?v=byHcYRpMgI4, https://www.sqlite.org
 passwordhashing: https://www.infobip.com/glossary/password-hashing
 https://tkdocs.com/tutorial/
+https://www.w3schools.com/python/python_tuples.asp
+https://stackoverflow.com/questions/41946222/how-do-i-create-a-popup-window-in-tkinter
