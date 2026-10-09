@@ -3,6 +3,10 @@ from tkinter import ttk
 import time 
 #import whatever for functions to work
 
+#Test for is logged in Remove !!!
+def is_loggedin():
+    return (1,"Bernard","7567")
+
 def open_menu():
     chat_list.grid_forget()
     Option_button.grid_forget()
@@ -17,6 +21,7 @@ def open_chats():
 
 def open_settings():
     chat_box.grid_forget()
+    chat_entry.delete(0, END)
     for child in Options_box.winfo_children():
         child.grid_forget()
     Options_box.grid(column=1, row=2, sticky=(N, W, E, S))
@@ -24,6 +29,7 @@ def open_settings():
 
 def open_add_contact():
     chat_box.grid_forget()
+    chat_entry.delete(0, END)
     for child in Options_box.winfo_children():
         child.grid_forget()
     Options_box.grid(column=1, row=2, sticky=(N, S, E, W))
@@ -37,6 +43,7 @@ def open_add_contact():
 
 def open_credits():
     chat_box.grid_forget()
+    chat_entry.delete(0, END)
     for child in Options_box.winfo_children():
         child.grid_forget()
     Options_box.grid(column=1, row=2, sticky=(N, W, E, S))
@@ -52,11 +59,8 @@ def open_chat(user_tuple):
     for child in message_box.winfo_children():
         child.destroy()
     ttk.Label(chat_box, textvariable=chat_username, font=user_font).grid(column=1, row=1, sticky=(N, W, E, S))
-    if uid in get_chats_if():
-        get_messages(uid)
-    else:
-        # Create new chat
-        ttk.Label(message_box, text="No messages yet", font=message_font).grid(column=1, row=1, sticky=(N, W, E, S))
+    if user_tuple in get_chats_if():
+        load_messages_if(uid)
     chat_entry.grid(column=1, row=3, sticky=(W, E))
     send_button.grid(column=2, row=3, sticky=(W))
     chat_entry.focus()
@@ -73,31 +77,29 @@ def get_chats_if() :
 
 def build_chats() :
     open_chats = get_chats_if()
-    for child in chat_list.winfo_children():
-        if isinstance(child, ttk.Button):
-            child.destroy()
     for i, user in enumerate(open_chats):
         username = user[0]
         uid = user[1]
-        chat1 = ttk.Button(chat_list, text=username, command=lambda c=uid: open_chat(c), style="Chat_Button.TButton")
+        chat1 = ttk.Button(chat_list, text=username, command=lambda c=user: open_chat(c), style="Chat_Button.TButton")
         chat1.grid(column=1, row=i+2, sticky=(W))
 
-def get_messages(chat_uid):
+def load_messages_if(chat_uid):
     # Get Messages
-    if chat_uid == "Bastian":
+    if chat_uid == "33973397":
         ttk.Label(message_box, text="Hoi", font=message_font).grid(column=1, row=1, sticky=(W))
         ttk.Label(message_box, text="Hoi Zrugg", font=message_font).grid(column=1, row=2, sticky=(E))
-    elif chat_uid == "Lukas":
+    elif chat_uid == "12345678":
         ttk.Label(message_box, text="Hallo", font=message_font).grid(column=1, row=1, sticky=(W))
         ttk.Label(message_box, text="Hallo Zrugg", font=message_font).grid(column=1, row=2, sticky=(E))
-    elif chat_uid == "Felix":
+    elif chat_uid == "98765432":
         ttk.Label(message_box, text="Hi", font=message_font).grid(column=1, row=1, sticky=(W))
         ttk.Label(message_box, text="Hi Zrugg", font=message_font).grid(column=1, row=2, sticky=(E))
 
-def check_login(own_uid, own_password):
-    # Get UID and Password from server
+def check_login_if(own_uid, own_password):
     attempts = 0
-    if own_uid == "Bernard" and own_password == "7567":
+    #login_status = check_login(own_uid, own_password)
+    login_status = 1
+    if login_status == 1 :
         login_frame.grid_forget()
         mainframe.grid(column=0, row=0, sticky=(N, W, E, S))
         own_username.set(own_uid)
@@ -105,30 +107,17 @@ def check_login(own_uid, own_password):
         login_entry.delete(0, END)
         password_entry.delete(0, END)
         build_chats()
-        root.bind('<Return>', lambda event: send_message_if())
+        root.bind('<Return>', lambda event: send_message_if(chat_entry.get(),open_chat_uid.get()))
         logged_in_as = ttk.Label(mainframe, textvariable=own_userstring, font=user_font, padding=(0,0,0,5))
         logged_in_as.grid(column=1, row=1, sticky=(W))
         bad_login.grid_forget()
-
-    elif own_uid == "Tim" and own_password == "1234":
-        login_frame.grid_forget()
-        mainframe.grid(column=0, row=0, sticky=(N, W, E, S))
-        own_username.set(own_uid)
-        own_userstring.set("Logged in as: " + own_uid)
-        login_entry.delete(0, END)
-        password_entry.delete(0, END)
-        build_chats()
-        logged_in_as = ttk.Label(mainframe, textvariable=own_userstring, font=user_font, padding=(0,0,0,5))
-        logged_in_as.grid(column=1, row=1, sticky=(W))
-        root.bind('<Return>',lambda event: send_message_if())
-        bad_login.grid_forget()
-
     elif attempts < 1:
         bad_login.grid(column=0, row=6, columnspan=2)
         attempts += 1
 
 
-def logout():
+def logout_if():
+    #logout()
     mainframe.grid_forget()
     login_frame.grid(column=0, row=0, sticky=(N, W, E, S))
     own_username.set("")
@@ -143,38 +132,33 @@ def logout():
     chat_entry.delete(0, END)
     Options_box.grid_forget()
     root.bind('<Return>', lambda event: login_button.invoke())
+    for child in chat_list.winfo_children():
+        if isinstance(child, ttk.Button):
+            child.destroy()
     for child in message_box.winfo_children():
         child.destroy()
     for child in chat_box.winfo_children():
-        if child.winfo_ismapped() :
-            child.ungrid()
+        child.grid_forget()
     open_chats()
     login_entry.focus()
 
-def sign_up_if(new_username, new_password, invite_code):
+def sign_up_if(new_password, invite_code):
     attempts = 0
-    if new_password == "" or new_username == "" :
+    if new_password == "" or invite_code == "" :
         bad_invite.grid_forget()
-        username_taken.grid_forget()
         no_cridentials.grid(column=0,row=8, columnspan=2)
         return
     #remove this !!!!!
-    signup_status = 1
-    #signup_status = sign_up(new_username, new_password, invite_code)
+    signup_status = 2
+    #signup_status = sign_up(new_password, invite_code)
     if signup_status == 1 :
         signup_window.grid_forget()
         success_window.grid(column=0, row=0)
-        signup_entry.delete(0,END)
         npassword_entry.delete(0,END)
         invite_entry.delete(0,END)
         root.after(2500, finish_signup)
-    elif signup_status == 3 :
-        bad_invite.grid_forget()
-        no_cridentials.grid_forget()
-        username_taken.grid(column=0,row=8, columnspan=2)
     elif signup_status == 2 and attempts < 1:
         no_cridentials.grid_forget()
-        username_taken.grid_forget()
         bad_invite.grid(column=0,row=8, columnspan=2)
         attempts += 1
 
@@ -188,7 +172,7 @@ def tosignup():
     signup_window.grid(column=0, row=0)
     login_entry.delete(0, END)
     password_entry.delete(0, END)
-    signup_entry.focus()
+    invite_entry.focus()
     bad_invite.grid_forget()
     no_cridentials.grid_forget()
     root.bind('<Return>', lambda event: signup_button.invoke())
@@ -197,21 +181,25 @@ def tologin():
     signup_window.grid_forget()
     login_window.grid(column=0, row=0)
     bad_login.grid_forget()
-    signup_entry.delete(0,END)
     npassword_entry.delete(0,END)
     invite_entry.delete(0,END)
     login_entry.focus()
     root.bind('<Return>', lambda event: login_button.invoke())
 
 def send_message_if(outgoing_message, recipient):
-    # send_message(outgoing_message, recipient)
-    chat_entry.delete(0,END)
-    print("message sent")
-    chat_entry.focus()
+    if chat_entry.get() == "" or open_chat_uid.get == "" :
+        chat_entry.focus()
+        return
+    else :
+        # Remove this !!!
+        print(outgoing_message, recipient,"sent")
+        # send_message(outgoing_message, recipient)
+        chat_entry.delete(0,END)
+        chat_entry.focus()
 
 def add_contact_if(uid, Nickname):
     # Remove this !!!
-    add_status = 3
+    add_status = 1
     attempts = 0
     #add_status = add_contact(uid, Nickname)
     if uid == "" or Nickname == "" :
@@ -273,36 +261,32 @@ login_window = ttk.Frame(login_frame, width=500, borderwidth=1, relief="solid", 
 login_window.grid(column=0, row=0)
 
 ttk.Label(login_window, text="Log In", font=fat_font, padding=5).grid(column=0, row=0, columnspan=2)
-ttk.Label(login_window, text="Username", font=user_font, padding=5).grid(column=0, row=1, columnspan=2)
+ttk.Label(login_window, text="UID", font=user_font, padding=5).grid(column=0, row=1, columnspan=2)
 login_entry = ttk.Entry(login_window, width=20, font=message_font)
 login_entry.grid(column=0, row=2, columnspan=2)
 ttk.Label(login_window, text="Password", font=user_font, padding=5).grid(column=0, row=3, columnspan=2)
 password_entry = ttk.Entry(login_window, width=20, font=message_font, show="*")
 password_entry.grid(column=0, row=4, columnspan=2)
 ttk.Button(login_window, text="Sign Up", style="Login_Button.TButton", command=tosignup).grid(column=0, row=5, pady=7)
-login_button = ttk.Button(login_window, text="Log In", style="Login_Button.TButton", command=lambda: check_login(login_entry.get(), password_entry.get()))
+login_button = ttk.Button(login_window, text="Log In", style="Login_Button.TButton", command=lambda: check_login_if(login_entry.get(), password_entry.get()))
 login_button.grid(column=1, row=5, pady=7)
-bad_login = ttk.Label(login_window, text="Wrong Username or Password", font=("TkDefault", 10, "bold"), foreground="red")
+bad_login = ttk.Label(login_window, text="Wrong UID or Password", font=("TkDefault", 10, "bold"), foreground="red")
 
 signup_window = ttk.Frame(login_frame, width=500, borderwidth=1, relief="solid", padding= 4)
 
 ttk.Label(signup_window, text="Sign Up", font=fat_font, padding=5).grid(column=0, row=0, columnspan=2)
-ttk.Label(signup_window, text="UID", font=user_font, padding=5).grid(column=0, row=1, columnspan=2)
-signup_entry = ttk.Entry(signup_window, width=20, font=message_font)
-signup_entry.grid(column=0, row=2, columnspan=2)
 ttk.Label(signup_window, text="Password", font=user_font, padding=5).grid(column=0, row=3, columnspan=2)
 npassword_entry = ttk.Entry(signup_window, width=20, font=message_font, show="*")
 npassword_entry.grid(column=0, row=4, columnspan=2)
-ttk.Label(signup_window, text="Invite Code", font=user_font, padding=5).grid(column=0, row=5, columnspan=2)
+ttk.Label(signup_window, text="Invite Code", font=user_font, padding=5).grid(column=0, row=1, columnspan=2)
 invite_entry = ttk.Entry(signup_window, width=20, font=message_font)
-invite_entry.grid(column=0, row=6, columnspan=2)
-signup_button = ttk.Button(signup_window, text="Sign Up", style="Login_Button.TButton", command= lambda: sign_up_if(signup_entry.get(),npassword_entry.get(),invite_entry.get()))
+invite_entry.grid(column=0, row=2, columnspan=2)
+signup_button = ttk.Button(signup_window, text="Sign Up", style="Login_Button.TButton", command= lambda: sign_up_if(npassword_entry.get(),invite_entry.get()))
 signup_button.grid(column=0, row=7, pady=7)
 tologin_button = ttk.Button(signup_window, text="Log In", style="Login_Button.TButton", command=tologin)
 tologin_button.grid(column=1, row=7, pady=7)
 bad_invite = ttk.Label(signup_window, text="Invalid invite code", font=("TkDefault", 10, "bold"), foreground="red",anchor=CENTER)
-no_cridentials = ttk.Label(signup_window, text="Please enter Username and Password", font=("TkDefault", 8, "bold"), foreground="red",anchor=CENTER)
-username_taken = ttk.Label(signup_window, text="This Username is already taken", font=("TkDefault", 9, "bold"), foreground="red",anchor=CENTER)
+no_cridentials = ttk.Label(signup_window, text="Enter invite code and password", font=("TkDefault", 8, "bold"), foreground="red",anchor=CENTER)
 success_window = ttk.Frame(login_frame, width=500, borderwidth=1, relief="solid", padding= 4)
 ttk.Label(success_window, text="Sign Up Successfull", font=("TkDefault", 22, "bold"), foreground="Green",anchor=CENTER).grid(row=0,column=0)
 
@@ -365,7 +349,7 @@ ttk.Label(Credits_box, text="Felix Angerer, Silas Roth, Irina Läubli", font=mes
 
 # Send message 
 chat_entry = ttk.Entry(chat_box, width=40, font=message_font)
-send_button = ttk.Button(chat_box,text="Send",command=send_message_if)
+send_button = ttk.Button(chat_box,text="Send",command= lambda : send_message_if(chat_entry.get(),open_chat_uid.get()))
 
 #Second Column
 Column_two = ttk.Frame(mainframe, width=200, padding= 0)
@@ -387,8 +371,14 @@ ttk.Label(menu_list, text="Options", font=("TkDefault", 16, "bold"), padding=(5,
 ttk.Button(menu_list, text="Settings", style="Chat_Button.TButton", command=open_settings).grid(column=1, row=2, sticky=(W))
 ttk.Button(menu_list, text="Add Contact", style="Chat_Button.TButton", command=open_add_contact).grid(column=1, row=3, sticky=(W))
 ttk.Button(menu_list, text="Credits", style="Chat_Button.TButton", command=open_credits).grid(column=1, row=4, sticky=(W))
-ttk.Button(menu_list, text="Logout", style="Chat_Button.TButton", command=logout).grid(column=1, row=5, sticky=(W))
+ttk.Button(menu_list, text="Logout", style="Chat_Button.TButton", command=logout_if).grid(column=1, row=5, sticky=(W))
 
 login_entry.focus()
 root.bind('<Return>', lambda event: login_button.invoke())
+
+logindata = is_loggedin()
+if logindata[0] == 1 :
+    number, uid, password = logindata
+    check_login_if(uid, password)
+
 root.mainloop()
