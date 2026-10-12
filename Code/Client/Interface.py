@@ -12,14 +12,37 @@ def load_messages(chat_uid):
         messages = [
             ("Hoi", "33973397", "1791628790.8973532"),
             ("Hoi Zrugg", "75677567", "1791628799.8973532"),
-            ("Ghost mich halt", "33974397", "1791638790.8973532")]
+            ("Ghost mich halt", "33973397", "1791638790.8973532"),
+            ("Wie gohts der?", "33973397", "1791639000.1234567"),
+            ("Alles fit, bi dir?", "75677567", "1791639050.6543210"),
+            ("Ja musig lauft", "33973397", "1791639100.9876543"),
+            ("Scho ghört vum nöie projekt?", "75677567", "1791639200.1112233"),
+            ("Nei, was isch gsi?", "33973397", "1791639250.4455667"),
+            ("Mer schribet en chat client in python mit tkinter!", "75677567", "1791639300.7788990"),
+            ("Oh wie guet, klappts mim scrollen?", "33973397", "1791639350.1357924"),
+            ("Glich luege, drum hani die ganzi liste gmacht...", "75677567", "1791639400.2468135"),
+            ("Testest du etz grad d'ui-elemente?", "33973397", "1791639450.3691214"),
+            ("Jo genau, si gseht scho rächt guet us!", "75677567", "1791639500.4826193"),
+            ("Git nur no einigi kleini buggs z'löse.", "33973397", "1791639550.5937281"),
+            ("Mer gsehnd üs spöter, tschüss!", "75677567", "1791639600.7048392"),
+            ("Ciao ciao!", "33973397", "1791639650.8159403"),
+            ("He hasch zyt zum gschwind luege?", "33973397", "1791640000.1111111"),
+            ("Ja klar, was isch los?", "75677567", "1791640050.2222222"),
+            ("D'nachrichte wend no ned ganz richtig umbreche bi mim layout.", "33973397", "1791640100.3333333"),
+            ("Ah du muesch d'wraplength property bi de labels setze!", "75677567", "1791640150.4444444"),
+            ("Aso mit pixel grässti und so?", "33973397", "1791640200.5555555"),
+            ("Genau, z.B. 300 oder so je nachgrössi vom fenster.", "75677567", "1791640250.6666666"),
+            ("Cool, probiere hie grad us.", "33973397", "1791640300.7777777"),
+            ("Und, klappts mit em canvas resize?", "75677567", "1791640350.8888888"),
+            ("Ja voll geil, danke dir für de tipp!", "33973397", "1791640400.9999999"),
+            ("Kei problem, mir händ's bald gschafft!", "75677567", "1791640450.1212121")
+        ]
     elif chat_uid == "12345678":
         messages = [
             ("Git nur no einigi kleini buggs z'löse.", "33973397", "1791639550.5937281"),
             ("Mer gsehnd üs ser, tschüss!", "75677567", "1791639600.7048392"),
             ("Ciao ciao!", "33973397", "1791639650.8159403")]
     return messages
-
 
 def open_menu():
     chat_list.grid_forget()
@@ -84,7 +107,7 @@ def get_chats_if() :
     #get_open_chats()
     # Remove this !!!
     if own_username.get() == "75677567":
-        open_chats = [("Bastian","33973397"), ("Lukas","12345678")]
+        open_chats = [("Bastian","33973397"), ("Lukas","12345678"),("Bastian","33973397"), ("Lukas","12345678"),("Bastian","33973397"), ("Lukas","12345678"),("Bastian","33973397"), ("Lukas","12345678"),("Bastian","33973397"), ("Lukas","12345678"),("Bastian","33973397"), ("Lukas","12345678"),("Bastian","33973397"), ("Lukas","12345678")]
     elif own_username.get() == "Tim":
         open_chats = [("Bastian","33973397"),("Felix","98765432")]
     return open_chats
@@ -116,6 +139,9 @@ def load_messages_if(chat_uid):
             ttk.Label(message_box, text=text , font=message_font2,justify="left",wraplength=620).grid(column=1, row=message_counter+1, sticky=(W))
             ttk.Label(message_box, text=real_time , font=("TkDefault", 8, "normal"), ).grid(column=1, row=message_counter+2, sticky=(W))
             message_counter += 3
+            
+    message_canvas.yview_moveto(0)
+    
 
 def load_new_message_if(message):
     global message_counter
@@ -131,7 +157,6 @@ def load_new_message_if(message):
         ttk.Label(message_box, text=text , font=message_font2).grid(column=1, row=message_counter+1, sticky=(W))
         ttk.Label(message_box, text=real_time , font=("TkDefault", 8, "normal"), ).grid(column=1, row=message_counter+2, sticky=(W))
         message_counter += 3
-
 
 def check_login_if(own_uid, own_password):
     attempts = 0
@@ -152,7 +177,6 @@ def check_login_if(own_uid, own_password):
     elif attempts < 1:
         bad_login.grid(column=0, row=6, columnspan=2)
         attempts += 1
-
 
 def logout_if():
     #logout()
@@ -350,9 +374,19 @@ chat_box.grid(column=1, row=2, sticky=(N, W, E, S))
 chat_box.columnconfigure(1, weight=1)
 chat_box.rowconfigure(2, weight=1)
 
-message_box = ttk.Frame(chat_box, padding= 7, width=450, borderwidth=1, relief="solid")
-message_box.grid(column=1, row=2,columnspan=2,sticky=(N, W, E, S))
+message_canvas = Canvas(chat_box)
+message_canvas.grid(column=1, row=2, columnspan=2, sticky=NSEW)
+message_canvas.rowconfigure(2,weight=1)
+
+message_box = ttk.Frame(message_canvas, padding= 7, width=450, borderwidth=1, relief="solid")
 message_box.columnconfigure(1, weight=1)
+
+message_scrollbar = ttk.Scrollbar(chat_box, orient="vertical", command=message_canvas.yview)
+message_scrollbar.grid(column=3,row=2,sticky=NS)
+message_box.bind("<Configure>",lambda e: message_canvas.configure(scrollregion=message_canvas.bbox("all")))
+message_canvas.configure(yscrollcommand=message_scrollbar.set)
+message_window = message_canvas.create_window(0, 0, window=message_box, anchor=NW)
+message_canvas.bind("<Configure>", lambda e: message_canvas.itemconfig(message_window, width=e.width))
 
 #Settings
 Settings_box = ttk.Frame(Options_box, width=500)
