@@ -3,47 +3,6 @@ from tkinter import ttk
 from time import *
 #import whatever for functions to work
 
-#Test for is logged in and messages, Remove !!!
-def is_loggedin():
-    return (1,"75677567","7567")
-
-def load_messages(chat_uid):
-    if chat_uid == "33973397":
-        messages = [
-            ("Hoi", "33973397", "1791628790.8973532"),
-            ("Hoi Zrugg", "75677567", "1791628799.8973532"),
-            ("Ghost mich halt", "33973397", "1791638790.8973532"),
-            ("Wie gohts der?", "33973397", "1791639000.1234567"),
-            ("Alles fit, bi dir?", "75677567", "1791639050.6543210"),
-            ("Ja musig lauft", "33973397", "1791639100.9876543"),
-            ("Scho ghört vum nöie projekt?", "75677567", "1791639200.1112233"),
-            ("Nei, was isch gsi?", "33973397", "1791639250.4455667"),
-            ("Mer schribet en chat client in python mit tkinter!", "75677567", "1791639300.7788990"),
-            ("Oh wie guet, klappts mim scrollen?", "33973397", "1791639350.1357924"),
-            ("Glich luege, drum hani die ganzi liste gmacht...", "75677567", "1791639400.2468135"),
-            ("Testest du etz grad d'ui-elemente?", "33973397", "1791639450.3691214"),
-            ("Jo genau, si gseht scho rächt guet us!", "75677567", "1791639500.4826193"),
-            ("Git nur no einigi kleini buggs z'löse.", "33973397", "1791639550.5937281"),
-            ("Mer gsehnd üs spöter, tschüss!", "75677567", "1791639600.7048392"),
-            ("Ciao ciao!", "33973397", "1791639650.8159403"),
-            ("He hasch zyt zum gschwind luege?", "33973397", "1791640000.1111111"),
-            ("Ja klar, was isch los?", "75677567", "1791640050.2222222"),
-            ("D'nachrichte wend no ned ganz richtig umbreche bi mim layout.", "33973397", "1791640100.3333333"),
-            ("Ah du muesch d'wraplength property bi de labels setze!", "75677567", "1791640150.4444444"),
-            ("Aso mit pixel grässti und so?", "33973397", "1791640200.5555555"),
-            ("Genau, z.B. 300 oder so je nachgrössi vom fenster.", "75677567", "1791640250.6666666"),
-            ("Cool, probiere hie grad us.", "33973397", "1791640300.7777777"),
-            ("Und, klappts mit em canvas resize?", "75677567", "1791640350.8888888"),
-            ("Ja voll geil, danke dir für de tipp!", "33973397", "1791640400.9999999"),
-            ("Kei problem, mir händ's bald gschafft!", "75677567", "1791640450.1212121")
-        ]
-    elif chat_uid == "12345678":
-        messages = [
-            ("Git nur no einigi kleini buggs z'löse.", "33973397", "1791639550.5937281"),
-            ("Mer gsehnd üs ser, tschüss!", "75677567", "1791639600.7048392"),
-            ("Ciao ciao!", "33973397", "1791639650.8159403")]
-    return messages
-
 def open_menu():
     chat_list.grid_forget()
     Option_button.grid_forget()
@@ -102,18 +61,8 @@ def open_chat(user_tuple):
     send_button.grid(column=2, row=3, sticky=(W))
     chat_entry.focus()
 
-def get_chats_if() :
-    #replace all of this function in the places with the bigger function
-    #get_open_chats()
-    # Remove this !!!
-    if own_username.get() == "75677567":
-        open_chats = [("Bastian","33973397"), ("Lukas","12345678"),("Bastian","33973397"), ("Lukas","12345678"),("Bastian","33973397"), ("Lukas","12345678"),("Bastian","33973397"), ("Lukas","12345678"),("Bastian","33973397"), ("Lukas","12345678"),("Bastian","33973397"), ("Lukas","12345678"),("Bastian","33973397"), ("Lukas","12345678")]
-    elif own_username.get() == "Tim":
-        open_chats = [("Bastian","33973397"),("Felix","98765432")]
-    return open_chats
-
 def build_chats() :
-    open_chats = get_chats_if()
+    open_chats = get_open_chats()
     for i, user in enumerate(open_chats):
         username = user[0]
         uid = user[1]
@@ -124,7 +73,6 @@ def build_chats() :
 
 def load_messages_if(chat_uid):
     global message_counter
-    #Replace this with real function !!!
     messages_render = load_messages(chat_uid)
     for i, msg in enumerate(messages_render) :
         text ,uid ,time = msg
@@ -139,7 +87,7 @@ def load_messages_if(chat_uid):
             ttk.Label(message_box, text=text , font=message_font2,justify="left",wraplength=620).grid(column=1, row=message_counter+1, sticky=(W))
             ttk.Label(message_box, text=real_time , font=("TkDefault", 8, "normal"), ).grid(column=1, row=message_counter+2, sticky=(W))
             message_counter += 3
-            
+
     message_canvas.yview_moveto(0)
     
 
@@ -160,8 +108,7 @@ def load_new_message_if(message):
 
 def check_login_if(own_uid, own_password):
     attempts = 0
-    #login_status = check_login(own_uid, own_password)
-    login_status = 1
+    login_status = check_login(own_uid, own_password)
     if login_status == 1 :
         login_frame.grid_forget()
         mainframe.grid(column=0, row=0, sticky=(N, W, E, S))
@@ -179,7 +126,7 @@ def check_login_if(own_uid, own_password):
         attempts += 1
 
 def logout_if():
-    #logout()
+    logout()
     mainframe.grid_forget()
     login_frame.grid(column=0, row=0, sticky=(N, W, E, S))
     own_username.set("")
@@ -210,9 +157,7 @@ def sign_up_if(new_password, invite_code):
         bad_invite.grid_forget()
         no_cridentials.grid(column=0,row=8, columnspan=2)
         return
-    #remove this !!!!!
-    signup_status = 2
-    #signup_status = sign_up(new_password, invite_code)
+    signup_status = sign_up(new_password, invite_code)
     if signup_status == 1 :
         signup_window.grid_forget()
         success_window.grid(column=0, row=0)
@@ -253,13 +198,11 @@ def send_message_if(outgoing_message, recipient):
         chat_entry.focus()
         return
     else :
-        # send_message(outgoing_message, recipient)
+        send_message(outgoing_message, recipient)
         chat_entry.delete(0,END)
         chat_entry.focus()
 
 def add_contact_if(uid, Nickname):
-    # Remove this !!!
-    add_status = 1
     attempts = 0
     if uid == "" or Nickname == "" :
         not_filled.grid_forget()
@@ -267,7 +210,7 @@ def add_contact_if(uid, Nickname):
         no_exist.grid_forget()
         not_filled.grid(column=1, row=8, columnspan=2)
         return
-    #add_status = add_contact(uid, Nickname)
+    add_status = add_contact(uid, Nickname)
     if add_status == 1 :
         global chats_number
         user = (Nickname,uid)
@@ -434,9 +377,21 @@ Column_two = ttk.Frame(mainframe, width=200, padding= 0)
 Column_two.grid(column=2, row=2, sticky=(N, W, E, S))
 Column_two.columnconfigure(1, weight=1)
 
-chat_list = ttk.Frame(Column_two, width=200, padding= (7,0,7,0))
-chat_list.grid(column=1, row=1, sticky=(N, W, E, S))
+chats_canvas = Canvas(Column_two,width=244, height=500)
+chats_canvas.grid(column=1,row=1, sticky=NSEW)
+
+chat_list = ttk.Frame(chats_canvas, width=200, padding= (7,0,7,0))
+chats_canvas.create_window((0, 0), window=chat_list, anchor="nw")
 chat_list.columnconfigure(1, weight=1)
+
+chat_list.bind("<Configure>",lambda e: chats_canvas.configure(scrollregion=chats_canvas.bbox("all")))
+
+scrollbar = ttk.Scrollbar(mainframe, orient="vertical", command=chats_canvas.yview)
+scrollbar.grid(row=2,column=3, sticky=NS)
+
+chats_canvas.configure(yscrollcommand=scrollbar.set)
+
+
 
 ttk.Label(chat_list, text="Chats", font=("TkDefault", 16, "bold"), padding=(5,0,5,5)).grid(column=1, row=1, sticky=(N, W, E, S))
 
