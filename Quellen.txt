@@ -4,3 +4,9 @@ passwordhashing: https://www.infobip.com/glossary/password-hashing
 https://tkdocs.com/tutorial/
 https://www.w3schools.com/python/python_tuples.asp
 https://stackoverflow.com/questions/41946222/how-do-i-create-a-popup-window-in-tkinter
+https://www.w3schools.com/python/python_variables_global.asp
+https://stackoverflow.com/questions/12400256/converting-epoch-time-into-the-datetime
+https://stackoverflow.com/questions/17651384/python-remove-division-decimal
+https://www.geeksforgeeks.org/python/scrollable-frames-in-tkinter/
+https://stackoverflow.com/questions/50243679/how-to-expand-a-frame-inside-a-canvas-in-tkinter
+https://stackoverflow.com/questions/19477636/does-tkinter-have-a-refresh-method 
