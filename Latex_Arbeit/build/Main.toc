@@ -1,0 +1,11 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {chapter}{\numberline {1}Einleitung}{2}{}%
+\contentsline {chapter}{\numberline {2}Motivation}{3}{}%
+\contentsline {chapter}{\numberline {3}Was sind Metadaten}{4}{}%
+\contentsline {chapter}{\numberline {4}Theorie}{5}{}%
+\contentsline {chapter}{\numberline {5}Unser Programm}{6}{}%
+\contentsline {chapter}{\numberline {6}Metadaten in unserem Programm}{7}{}%
+\contentsline {chapter}{\numberline {7}Reflexion}{8}{}%
+\contentsline {chapter}{\numberline {8}Future Work}{9}{}%
+\contentsline {chapter}{\numberline {9}Fazit}{10}{}%
+\contentsline {chapter}{\numberline {10}Quellen}{11}{}%
