@@ -1,11 +1,25 @@
 from tkinter import *
 from tkinter import ttk
-import time 
+from time import *
 #import whatever for functions to work
 
-#Test for is logged in Remove !!!
+#Test for is logged in and messages, Remove !!!
 def is_loggedin():
-    return (1,"Bernard","7567")
+    return (1,"75677567","7567")
+
+def load_messages(chat_uid):
+    if chat_uid == "33973397":
+        messages = [
+            ("Hoi", "33973397", "1791628790.8973532"),
+            ("Hoi Zrugg", "75677567", "1791628799.8973532"),
+            ("Ghost mich halt", "33974397", "1791638790.8973532")]
+    elif chat_uid == "12345678":
+        messages = [
+            ("Git nur no einigi kleini buggs z'löse.", "33973397", "1791639550.5937281"),
+            ("Mer gsehnd üs ser, tschüss!", "75677567", "1791639600.7048392"),
+            ("Ciao ciao!", "33973397", "1791639650.8159403")]
+    return messages
+
 
 def open_menu():
     chat_list.grid_forget()
@@ -69,7 +83,7 @@ def get_chats_if() :
     #replace all of this function in the places with the bigger function
     #get_open_chats()
     # Remove this !!!
-    if own_username.get() == "Bernard":
+    if own_username.get() == "75677567":
         open_chats = [("Bastian","33973397"), ("Lukas","12345678")]
     elif own_username.get() == "Tim":
         open_chats = [("Bastian","33973397"),("Felix","98765432")]
@@ -82,18 +96,42 @@ def build_chats() :
         uid = user[1]
         chat1 = ttk.Button(chat_list, text=username, command=lambda c=user: open_chat(c), style="Chat_Button.TButton")
         chat1.grid(column=1, row=i+2, sticky=(W))
+    global chats_number
+    chats_number = len(open_chats)
 
 def load_messages_if(chat_uid):
-    # Get Messages
-    if chat_uid == "33973397":
-        ttk.Label(message_box, text="Hoi", font=message_font).grid(column=1, row=1, sticky=(W))
-        ttk.Label(message_box, text="Hoi Zrugg", font=message_font).grid(column=1, row=2, sticky=(E))
-    elif chat_uid == "12345678":
-        ttk.Label(message_box, text="Hallo", font=message_font).grid(column=1, row=1, sticky=(W))
-        ttk.Label(message_box, text="Hallo Zrugg", font=message_font).grid(column=1, row=2, sticky=(E))
-    elif chat_uid == "98765432":
-        ttk.Label(message_box, text="Hi", font=message_font).grid(column=1, row=1, sticky=(W))
-        ttk.Label(message_box, text="Hi Zrugg", font=message_font).grid(column=1, row=2, sticky=(E))
+    global message_counter
+    #Replace this with real function !!!
+    messages_render = load_messages(chat_uid)
+    for i, msg in enumerate(messages_render) :
+        text ,uid ,time = msg
+        real_time = strftime('%H:%M:%S %d.%m.%Y', localtime(float(time)))
+        if uid == own_username.get() : 
+            ttk.Label(message_box, text="You" , font=("TkDefault", 13, "bold"), ).grid(column=1, row=message_counter, sticky=(E))
+            ttk.Label(message_box, text=text , font=message_font2, foreground="blue", wraplength=620, justify="right").grid(column=1, row=message_counter+1, sticky=(E))
+            ttk.Label(message_box, text=real_time , font=("TkDefault", 8, "normal"), ).grid(column=1, row=message_counter+2, sticky=(E))
+            message_counter += 3
+        else :
+            ttk.Label(message_box, text=chat_username.get() , font=("TkDefault", 12, "bold"), ).grid(column=1, row=message_counter, sticky=(W))
+            ttk.Label(message_box, text=text , font=message_font2,justify="left",wraplength=620).grid(column=1, row=message_counter+1, sticky=(W))
+            ttk.Label(message_box, text=real_time , font=("TkDefault", 8, "normal"), ).grid(column=1, row=message_counter+2, sticky=(W))
+            message_counter += 3
+
+def load_new_message_if(message):
+    global message_counter
+    text ,uid ,time = message
+    real_time = strftime('%H:%M:%S %d.%m.%Y', localtime(float(time)))
+    if uid == own_username.get() : 
+        ttk.Label(message_box, text="You" , font=("TkDefault", 13, "bold"), ).grid(column=1, row=message_counter, sticky=(E))
+        ttk.Label(message_box, text=text , font=message_font2, foreground="blue").grid(column=1, row=message_counter+1, sticky=(E))
+        ttk.Label(message_box, text=real_time , font=("TkDefault", 8, "normal"), ).grid(column=1, row=message_counter+2, sticky=(E))
+        message_counter += 3
+    else :
+        ttk.Label(message_box, text=chat_username.get() , font=("TkDefault", 12, "bold"), ).grid(column=1, row=message_counter, sticky=(W))
+        ttk.Label(message_box, text=text , font=message_font2).grid(column=1, row=message_counter+1, sticky=(W))
+        ttk.Label(message_box, text=real_time , font=("TkDefault", 8, "normal"), ).grid(column=1, row=message_counter+2, sticky=(W))
+        message_counter += 3
+
 
 def check_login_if(own_uid, own_password):
     attempts = 0
@@ -191,8 +229,6 @@ def send_message_if(outgoing_message, recipient):
         chat_entry.focus()
         return
     else :
-        # Remove this !!!
-        print(outgoing_message, recipient,"sent")
         # send_message(outgoing_message, recipient)
         chat_entry.delete(0,END)
         chat_entry.focus()
@@ -201,7 +237,6 @@ def add_contact_if(uid, Nickname):
     # Remove this !!!
     add_status = 1
     attempts = 0
-    #add_status = add_contact(uid, Nickname)
     if uid == "" or Nickname == "" :
         not_filled.grid_forget()
         already_exists.grid_forget()
@@ -210,13 +245,19 @@ def add_contact_if(uid, Nickname):
         return
     #add_status = add_contact(uid, Nickname)
     if add_status == 1 :
-        usertuple = (Nickname,uid)
+        global chats_number
+        user = (Nickname,uid)
         not_filled.grid_forget()
         already_exists.grid_forget()
         no_exist.grid_forget()
-        open_chat(usertuple)
+        open_chat(user)
+        username = Nickname
+        chat1 = ttk.Button(chat_list, text=username, command=lambda c=user: open_chat(c), style="Chat_Button.TButton")
+        chat1.grid(column=1, row=chats_number+2, sticky=(W))
         name_entry.delete(0,END)
         uid_entry.delete(0,END)
+        open_chats()
+        chats_number += 1
     elif add_status == 2 and attempts < 1:
         not_filled.grid_forget()
         no_exist.grid_forget()
@@ -237,11 +278,14 @@ own_username = StringVar()
 chat_username = StringVar()
 own_userstring = StringVar()
 open_chat_uid = StringVar()
+chats_number = 0
+message_counter = 0
 
 # Fonts
 fat_font = ("TkDefault", 24, "bold")
 user_font = ("TkDefault", 14, "bold")
 message_font = ("TkDefault", 12, "normal")
+message_font2 = ("TkDefault", 14, "normal")
 
 style = ttk.Style()
 style.configure("Chat_Button.TButton", font=("Helvetica", 14, "normal"), width=20, anchor="w", padding=3)
