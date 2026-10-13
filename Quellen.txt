@@ -1,14 +1,16 @@
 intro sockets & threading: https://www.datacamp.com/tutorial/a-complete-guide-to-socket-programming-in-python?dc_referrer=https%3A%2F%2Fwww.ecosia.org%2F
 sqlite db: https://www.youtube.com/watch?v=byHcYRpMgI4, https://www.sqlite.org
 passwordhashing: https://www.infobip.com/glossary/password-hashing
-https://tkdocs.com/tutorial/
-https://www.w3schools.com/python/python_tuples.asp
-https://stackoverflow.com/questions/41946222/how-do-i-create-a-popup-window-in-tkinter
-https://www.w3schools.com/python/python_variables_global.asp
-https://stackoverflow.com/questions/12400256/converting-epoch-time-into-the-datetime
-https://stackoverflow.com/questions/17651384/python-remove-division-decimal
-https://www.geeksforgeeks.org/python/scrollable-frames-in-tkinter/
-https://stackoverflow.com/questions/50243679/how-to-expand-a-frame-inside-a-canvas-in-tkinter
-https://stackoverflow.com/questions/19477636/does-tkinter-have-a-refresh-method 
-https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes
-https://www.overleaf.com/learn/latex/Page_size_and_margins
+#https://tkdocs.com/tutorial/
+#https://www.w3schools.com/python/python_tuples.asp
+#https://www.w3schools.com/python/python_variables_global.asp
+#https://stackoverflow.com/questions/12400256/converting-epoch-time-into-the-datetime
+#https://www.geeksforgeeks.org/python/scrollable-frames-in-tkinter/
+#https://stackoverflow.com/questions/50243679/how-to-expand-a-frame-inside-a-canvas-in-tkinter
+#https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes
+#https://www.overleaf.com/learn/latex/Page_size_and_margins
+#https://tex.stackexchange.com/questions/82664/when-to-use-par-and-when-newline-or-blank-lines
+#https://www.overleaf.com/learn/latex/Questions/How_do_I_adjust_the_font_size%3F
+#https://tex.stackexchange.com/questions/134180/how-do-i-add-citations-at-the-end-of-the-document-as-done-here
+#https://tex.stackexchange.com/questions/459640/implementing-biber-for-biblatex-in-microsoft-visual-studio-code
+#https://docs.overleaf.com/citing-and-references/creating-a-bibliography
