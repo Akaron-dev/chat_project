@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (MiKTeX 25.12) (format=lualatex 2026.8.20)  13 OCT 2026 12:49
+This is LuaHBTeX, Version 1.24.0 (MiKTeX 25.12) (format=lualatex 2026.8.20)  13 OCT 2026 16:35
  restricted system commands enabled.
 **c:/Users/berna/Documents/GitHub/chat_project/Latex_Arbeit/Main
 (c:/Users/berna/Documents/GitHub/chat_project/Latex_Arbeit/Main.tex
@@ -567,7 +567,10 @@ Package csquotes Info: ... configuration file loaded successfully.
 
 (C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/csquotes/csquotes.cfg
 File: csquotes.cfg 
-))
+)) (C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/setspace/setspace.st
+y
+Package: setspace 2022/12/04 v6.7b set line spacing
+)
 luaotfload | cache : Lookup cache loaded from C:/Users/berna/AppData/Local/MiKTe
 X/luatex-cache/generic/names/luaotfload-lookup-cache.luc.
 
@@ -607,22 +610,22 @@ Package babel Info: 'ngerman' activates 'german' shorthands.
 )
 \openout1 = Main.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
 
 (C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mk
 ii
@@ -656,57 +659,57 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 14.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 14.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 14.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 14.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 14.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 14.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 14.
-LaTeX Font Info:    Redeclaring math accent \check on input line 14.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 14.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 14.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 14.
-LaTeX Font Info:    Redeclaring math symbol \colon on input line 14.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 14.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 14.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 14.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 14.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 14.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 14.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 14.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 14.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 14.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 14.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 14.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 14.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 14.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 15.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 15.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 15.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 15.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 15.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 15.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 15.
+LaTeX Font Info:    Redeclaring math accent \check on input line 15.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 15.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 15.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \colon on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 15.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 15.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 14.
+(Font)              `operators' in the math version `normal' on input line 15.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/Arial(0)/m/n on input line 14.
+(Font)                  OT1/cmr/m/n --> TU/Arial(0)/m/n on input line 15.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 14.
+(Font)              `operators' in the math version `bold' on input line 15.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/Arial(0)/m/n on input line 14.
+(Font)                  OT1/cmr/bx/n --> TU/Arial(0)/m/n on input line 15.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/Arial(0)/m/n --> TU/Arial(0)/m/n on input line 14.
+(Font)                  TU/Arial(0)/m/n --> TU/Arial(0)/m/n on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/Arial(0)/m/it on input line 14.
+(Font)                  OT1/cmr/m/it --> TU/Arial(0)/m/it on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/Arial(0)/b/n on input line 14.
+(Font)                  OT1/cmr/bx/n --> TU/Arial(0)/b/n on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 14.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 14.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 15.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/Arial(0)/m/n --> TU/Arial(0)/b/n on input line 14.
+(Font)                  TU/Arial(0)/m/n --> TU/Arial(0)/b/n on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/Arial(0)/b/it on input line 14.
+(Font)                  OT1/cmr/bx/it --> TU/Arial(0)/b/it on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 14.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 14.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 15.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -769,8 +772,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Main.bbl' found.
  (c:/Users/berna/Documents/GitHub/chat_project/Latex_Arbeit/build/Main.bbl)
-Package biblatex Info: Reference section=0 on input line 14.
-Package biblatex Info: Reference segment=0 on input line 14.
+Package biblatex Info: Reference section=0 on input line 15.
+Package biblatex Info: Reference segment=0 on input line 15.
 
 (./titelblatt.tex
 *geometry* verbose mode - [ newgeometry ] result:
@@ -823,7 +826,12 @@ Kapitel 1.
 
 ]
 Kapitel 2.
-) (./metadaten.tex [3
+) (./metadaten.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--1
+
+ []
+
+[3
 
 ]
 Kapitel 3.
@@ -851,41 +859,47 @@ Kapitel 8.
 
 ]
 Kapitel 9.
-) (./quellen.tex [10
+) [10
 
 ]
-Kapitel 10.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 3.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 3.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 3.
+(c:/Users/berna/Documents/GitHub/chat_project/Latex_Arbeit/build/Main.lof)
+\tf@lof=\write5
 
-Overfull \hbox (40.15115pt too wide) in paragraph at lines 3--3
+\openout5 = Main.lof
+
+[11
+
+]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 31.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 31.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 31.
+
+Overfull \hbox (40.15115pt too wide) in paragraph at lines 31--31
 []\TU/Arial(0)/m/n/12 fh-drsdg. \TU/Arial(0)/m/it/12 How to ex-pand a frame in-s
 i-de a can-vas in tk-in-ter\TU/Arial(0)/m/n/12 . 2018. \TU/Arial(0)/m/sc/12 
 󰋼󰋹󰋳\TU/Arial(0)/m/n/12 : $\TU/lmtt/m/n/12 https : / / stackoverflow .
  []
 
 
-Overfull \hbox (23.93753pt too wide) in paragraph at lines 3--3
+Overfull \hbox (23.93753pt too wide) in paragraph at lines 31--31
 []\TU/Arial(0)/m/n/12 Ge-eks-f-or-Ge-eks. \TU/Arial(0)/m/it/12 Scrollable Frames
  in Tk-in-ter\TU/Arial(0)/m/n/12 . 2026. \TU/Arial(0)/m/sc/12 󰋼󰋹󰋳\TU/A
 rial(0)/m/n/12 : $\TU/lmtt/m/n/12 https : / / www . geeksforgeeks .
  []
 
 
-Overfull \hbox (29.07693pt too wide) in paragraph at lines 3--3
+Overfull \hbox (29.07693pt too wide) in paragraph at lines 31--31
 []\TU/Arial(0)/m/n/12 ron roth-man. \TU/Arial(0)/m/it/12 Con-ver-ting epoch time
  in-to the da-te-time\TU/Arial(0)/m/n/12 . 2023. \TU/Arial(0)/m/sc/12 󰋼󰋹
 󰋳\TU/Arial(0)/m/n/12 : $\TU/lmtt/m/n/12 https : / / stackoverflow .
  []
 
-) [11
+[12
 
-]
-(c:/Users/berna/Documents/GitHub/chat_project/Latex_Arbeit/build/Main.aux)
+] (c:/Users/berna/Documents/GitHub/chat_project/Latex_Arbeit/build/Main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -896,21 +910,21 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 14668 strings out of 476081
+ 14721 strings out of 476081
  125165,1373583 words of node,token memory allocated
  514 words of node memory still in use:
    4 hlist, 1 vlist, 1 rule, 5 glue, 3 kern, 1 glyph, 7 attribute, 62 glue_spec,
  5 attribute_list, 1 write nodes
-   avail lists: 1:2,2:901,3:452,4:7,5:72,6:46,7:4848,8:110,9:138,10:7,11:168
- 36840 multiletter control sequences out of 65536+600000
+   avail lists: 1:2,2:964,3:490,4:20,5:74,6:50,7:5361,8:110,9:144,10:17,11:600
+ 36886 multiletter control sequences out of 65536+600000
  47 fonts using 13550223 bytes
- 73i,5n,92p,746b,2367s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 73i,5n,92p,1303b,2367s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/users/berna/appdata/local/programs/miktex/fonts/opentype/public/lm/lmmono12-
 regular.otf><C:/WINDOWS/Fonts/arialni.ttf><C:/WINDOWS/Fonts/arialbd.ttf><C:/WIND
 OWS/Fonts/arial.ttf>
-Output written on Main.pdf (12 pages, 106520 bytes).
+Output written on Main.pdf (13 pages, 113727 bytes).
 
-PDF statistics: 69 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 72 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 1048576)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 

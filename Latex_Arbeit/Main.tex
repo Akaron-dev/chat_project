@@ -6,6 +6,7 @@
 \usepackage[top=2.5mm, bottom=25mm, left=25mm, right=30mm]{geometry}
 \usepackage[backend=biber]{biblatex}
 \usepackage{csquotes}
+\usepackage{setspace}
 
 \addbibresource{quellen.bib}
 
@@ -24,6 +25,10 @@
     \input{reflexion.tex}
     \input{future_work.tex}
     \input{fazit.tex}
-    \input{quellen.tex}
+	\listoffigures
+    \addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+    \nocite{*}
+    \printbibliography[heading=bibintoc, title={Quellenverzeichnis}]
+
 
 \end{document}

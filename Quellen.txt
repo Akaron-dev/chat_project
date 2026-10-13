@@ -14,3 +14,5 @@ passwordhashing: https://www.infobip.com/glossary/password-hashing
 #https://tex.stackexchange.com/questions/134180/how-do-i-add-citations-at-the-end-of-the-document-as-done-here
 #https://tex.stackexchange.com/questions/459640/implementing-biber-for-biblatex-in-microsoft-visual-studio-code
 #https://docs.overleaf.com/citing-and-references/creating-a-bibliography
+#https://www.heise.de/tipps-tricks/LaTeX-Abbildungsverzeichnis-automatisch-erstellen-7261837.html
+https://fightchatcontrol.eu/chat-control-overview
