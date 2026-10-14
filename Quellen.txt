@@ -16,3 +16,8 @@ passwordhashing: https://www.infobip.com/glossary/password-hashing
 #https://docs.overleaf.com/citing-and-references/creating-a-bibliography
 #https://www.heise.de/tipps-tricks/LaTeX-Abbildungsverzeichnis-automatisch-erstellen-7261837.html
 https://fightchatcontrol.eu/chat-control-overview
+https://medium.com/@saxenaaman628/fundamentals-of-chat-system-5155947a51ef
+https://www.cometchat.com/blog/chat-application-architecture-and-system-design
+https://www.cometchat.com/tutorials/how-to-build-a-messaging-site-with-react-whatsapp-clone
+https://www.cometchat.com/blog/peer-to-peer-chat
+https://en.wikipedia.org/wiki/Client%E2%80%93server_model

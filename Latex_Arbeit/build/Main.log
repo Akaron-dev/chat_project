@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (MiKTeX 25.12) (format=lualatex 2026.8.20)  13 OCT 2026 16:35
+This is LuaHBTeX, Version 1.24.0 (MiKTeX 25.12) (format=lualatex 2026.8.20)  14 OCT 2026 17:45
  restricted system commands enabled.
 **c:/Users/berna/Documents/GitHub/chat_project/Latex_Arbeit/Main
 (c:/Users/berna/Documents/GitHub/chat_project/Latex_Arbeit/Main.tex
@@ -720,14 +720,14 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
 * h-part:(L,W,R)=(71.13188pt, 441.01773pt, 85.35826pt)
-* v-part:(T,H,B)=(7.11317pt, 766.80179pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
 * \textwidth=441.01773pt
-* \textheight=766.80179pt
+* \textheight=702.78308pt
 * \oddsidemargin=-1.1381pt
 * \evensidemargin=-1.1381pt
-* \topmargin=-97.03061pt
+* \topmargin=-33.0119pt
 * \headheight=12.0pt
 * \headsep=19.8738pt
 * \topskip=12.0pt
@@ -813,7 +813,14 @@ Package biblatex Info: Reference segment=0 on input line 15.
 
 
 {C:/Users/berna/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}])
-(c:/Users/berna/Documents/GitHub/chat_project/Latex_Arbeit/build/Main.toc)
+(c:/Users/berna/Documents/GitHub/chat_project/Latex_Arbeit/build/Main.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 5.
+)
 \tf@toc=\write4
 
 \openout4 = Main.toc
@@ -826,7 +833,7 @@ Kapitel 1.
 
 ]
 Kapitel 2.
-) (./metadaten.tex
+) (./theorie.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--1
 
  []
@@ -835,31 +842,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--1
 
 ]
 Kapitel 3.
-) (./theorie.tex [4
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 5.
 
-]
+Underfull \hbox (badness 10000) in paragraph at lines 5--8
+
+ []
+
+[4
+
+]) (./metadaten.tex
+LaTeX Font Info:    Font shape `TU/Arial(0)/m/sl' in size <12> not available
+(Font)              Font shape `TU/Arial(0)/m/it' tried instead on input line 1
+.
+Package babel Info: 'ngerman' activates 'german' shorthands.
+(babel)             Reported on input line 1.
+ [5]
 Kapitel 4.
-) (./programm.tex [5
+) (./programm.tex [6
 
 ]
 Kapitel 5.
-) (./unsere_methadaten.tex [6
+) (./unsere_methadaten.tex [7
 
 ]
 Kapitel 6.
-) (./reflexion.tex [7
+) (./reflexion.tex [8
 
 ]
 Kapitel 7.
-) (./future_work.tex [8
+) (./future_work.tex [9
 
 ]
 Kapitel 8.
-) (./fazit.tex [9
+) (./fazit.tex [10
 
 ]
 Kapitel 9.
-) [10
+) [11
 
 ]
 (c:/Users/berna/Documents/GitHub/chat_project/Latex_Arbeit/build/Main.lof)
@@ -867,16 +889,9 @@ Kapitel 9.
 
 \openout5 = Main.lof
 
-[11
+[12
 
 ]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 31.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 31.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 31.
-
 Overfull \hbox (40.15115pt too wide) in paragraph at lines 31--31
 []\TU/Arial(0)/m/n/12 fh-drsdg. \TU/Arial(0)/m/it/12 How to ex-pand a frame in-s
 i-de a can-vas in tk-in-ter\TU/Arial(0)/m/n/12 . 2018. \TU/Arial(0)/m/sc/12 
@@ -897,7 +912,7 @@ Overfull \hbox (29.07693pt too wide) in paragraph at lines 31--31
 󰋳\TU/Arial(0)/m/n/12 : $\TU/lmtt/m/n/12 https : / / stackoverflow .
  []
 
-[12
+[13
 
 ] (c:/Users/berna/Documents/GitHub/chat_project/Latex_Arbeit/build/Main.aux)
  ***********
@@ -910,21 +925,21 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 14721 strings out of 476081
+ 14732 strings out of 476081
  125165,1373583 words of node,token memory allocated
- 514 words of node memory still in use:
-   4 hlist, 1 vlist, 1 rule, 5 glue, 3 kern, 1 glyph, 7 attribute, 62 glue_spec,
- 5 attribute_list, 1 write nodes
-   avail lists: 1:2,2:964,3:490,4:20,5:74,6:50,7:5361,8:110,9:144,10:17,11:600
- 36886 multiletter control sequences out of 65536+600000
- 47 fonts using 13550223 bytes
- 73i,5n,92p,1303b,2367s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 527 words of node memory still in use:
+   4 hlist, 1 vlist, 1 rule, 6 glue, 3 kern, 1 glyph, 9 attribute, 62 glue_spec,
+ 6 attribute_list, 1 write nodes
+   avail lists: 1:1,2:964,3:490,4:20,5:116,6:62,7:5360,8:110,9:192,10:17,11:600
+ 36897 multiletter control sequences out of 65536+600000
+ 61 fonts using 17913591 bytes
+ 73i,8n,92p,1303b,2367s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/users/berna/appdata/local/programs/miktex/fonts/opentype/public/lm/lmmono12-
 regular.otf><C:/WINDOWS/Fonts/arialni.ttf><C:/WINDOWS/Fonts/arialbd.ttf><C:/WIND
 OWS/Fonts/arial.ttf>
-Output written on Main.pdf (13 pages, 113727 bytes).
+Output written on Main.pdf (14 pages, 120209 bytes).
 
-PDF statistics: 72 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 75 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 1048576)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 
