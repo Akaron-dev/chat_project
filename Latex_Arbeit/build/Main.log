@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (MiKTeX 25.12) (format=lualatex 2026.8.20)  14 OCT 2026 17:45
+This is LuaHBTeX, Version 1.24.0 (MiKTeX 25.12) (format=lualatex 2026.8.20)  15 OCT 2026 10:36
  restricted system commands enabled.
 **c:/Users/berna/Documents/GitHub/chat_project/Latex_Arbeit/Main
 (c:/Users/berna/Documents/GitHub/chat_project/Latex_Arbeit/Main.tex
@@ -847,7 +847,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 5--8
+Underfull \hbox (badness 10000) in paragraph at lines 10--12
 
  []
 
@@ -925,19 +925,19 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 14732 strings out of 476081
+ 14741 strings out of 476081
  125165,1373583 words of node,token memory allocated
- 527 words of node memory still in use:
-   4 hlist, 1 vlist, 1 rule, 6 glue, 3 kern, 1 glyph, 9 attribute, 62 glue_spec,
+ 532 words of node memory still in use:
+   4 hlist, 1 vlist, 1 rule, 6 glue, 3 kern, 1 glyph, 9 attribute, 63 glue_spec,
  6 attribute_list, 1 write nodes
    avail lists: 1:1,2:964,3:490,4:20,5:116,6:62,7:5360,8:110,9:192,10:17,11:600
- 36897 multiletter control sequences out of 65536+600000
- 61 fonts using 17913591 bytes
+ 36906 multiletter control sequences out of 65536+600000
+ 61 fonts using 17913911 bytes
  73i,8n,92p,1303b,2367s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/users/berna/appdata/local/programs/miktex/fonts/opentype/public/lm/lmmono12-
 regular.otf><C:/WINDOWS/Fonts/arialni.ttf><C:/WINDOWS/Fonts/arialbd.ttf><C:/WIND
 OWS/Fonts/arial.ttf>
-Output written on Main.pdf (14 pages, 120209 bytes).
+Output written on Main.pdf (14 pages, 121631 bytes).
 
 PDF statistics: 75 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 1048576)

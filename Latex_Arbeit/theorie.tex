@@ -1,12 +1,20 @@
 \chapter{Die Client-Server-Struktur}
 
-Als erstes wollen wir verstehen wie ein Messaging-Programm grundsätzlich funktioniert. Unser Ziel ist es von einem Gerät A eine Nachricht an ein anderes Gerät B versenden zu können. Dabei sollte möglchst wenig leistung gebarucht werden, es sollte möglichst schnell stattfinden und die Nachricht darf für niemanden ausser den Absender und den Empfänger lesbar sein. Um dieses zu tun gibt es schon sehr viele Programme, die meisten können jedoch anhand ihres Funktionsprinzipes in drei Unterkategorien eingeteilt werden. Diese sind die Client-Server-Struktur, das Peer-to-Peer Messaging und Föderierte Servermodell.
+Als erstes, wollen wir verstehen, wie ein Messaging-Programm grundsätzlich funktioniert. Unser Ziel ist es, von einem Gerät A eine Nachricht an ein anderes Gerät B versenden zu können. Dies sollte möglichst wenig Leistung gebraucht werden, möglichst schnell stattfinden, und die Nachricht darf für Niemanden ausser dem Absender und den Empfänger lesbar sein. Um dies zu tun, gibt es schon sehr viele Programme. Die meisten können jedoch anhand ihres Funktionsprinzips in drei Unterkategorien eingeteilt werden. Diese sind die Client-Server-Struktur, das Peer-to-Peer-Messaging und das föderierte Servermodell.
 \section{Das Funktionsprinzip der Client-Server-Struktur}
 Die Client-Server-Struktur ist das verbreitetste Modell für Messaging-Programme und auch dasjenige, welches wir für unser Projekt benutzen. In diesem Modell werden Clients benutzt, die sich alle mit einem Server verbinden\footnote{Dies kann auch einen Server Cluster sein}.
  Der Client ist ein Programm, das auf dem Gerät jedes Nutzers läuft. Der Client dient dazu, Nachrichten an den Server zu senden und sie von ihm zu empfangen. Dazu hat er ein Interface, auf dem die Nachrichten angezeigt werden und neue verfasst werden können. Der Server ist eine zentrale Rechenmaschine, welche gleichzeitig mit allen Clients verbunden ist. Er speichert die vom Client verschickten Nachrichten ab, bis er eine Verbindung zum gewählten Empfänger erstellt hat und leitet sie dann an ihn weiter. Zusätzlich kann dieser, wenn er die Nachricht empfängt und liest, dies dem Server mitteilen, und dieser leitet dies an den Sender zurück. Bekannte Beispiele für Programme, die diese Struktur verwenden, sind WhatsApp und Signal. Einige Programme, wie zum Beispiel Discord, löschen die Nachrichten nicht vom Server, nachdem sie weitergeleitet wurden. Dies ermöglicht dem Nutzer, alle vergangenen Nachrichten auf einem neuen Gerät abzurufen.
 \subsection{Der Aufbau}
 \subsection{Verbindung zwischen Client und Server}
 \subsection{Kryptologie}
+Wenn wir unsere Nachricht einfach verschiken würden könnte jeder sie lesen. Um das zu verhindern gibt es ein verfahren namens verschlüsselung.\\\\
+Die Definition von Wikipedia: 
+\begin{quote}
+	\textit{"Verschlüsselung nennt man die Umwandlung von Informationen, genannt Klartext, in einen Geheimtext. Dies geschieht mithilfe von kryptografischen Verfahren unter Verwendung eines geheimzuhaltenden Schlüssels, der nur den befugten Personen bekannt sein darf. Mit Kenntnis des Schlüssels kann der Geheimtext wieder in den Klartext zurückgewandelt werden, was Entschlüsselung genannt wird."
+}
+\end{quote}
+\subsubsection{Die Asymmetrische Verschlüsselung}
+\subsubsection{Das Hybrid-Kryptosystem}
 \section{Vergleich zu anderen Strukturen}
 P2P und blah blah sind au mega cool
 \section{Die umsetzung von Signal/WhatsApp}

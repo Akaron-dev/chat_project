@@ -6,6 +6,8 @@
 \contentsline {subsection}{\numberline {3.1.1}Der Aufbau}{5}{}%
 \contentsline {subsection}{\numberline {3.1.2}Verbindung zwischen Client und Server}{5}{}%
 \contentsline {subsection}{\numberline {3.1.3}Kryptologie}{5}{}%
+\contentsline {subsubsection}{Die Asymmetrische Verschlüsselung}{5}{}%
+\contentsline {subsubsection}{Das Hybrid-Kryptosystem}{5}{}%
 \contentsline {section}{\numberline {3.2}Vergleich zu anderen Strukturen}{5}{}%
 \contentsline {section}{\numberline {3.3}Die umsetzung von Signal/WhatsApp}{5}{}%
 \contentsline {chapter}{\numberline {4}Die Metadaten}{6}{}%

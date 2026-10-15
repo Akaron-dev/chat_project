@@ -21,3 +21,5 @@ https://www.cometchat.com/blog/chat-application-architecture-and-system-design
 https://www.cometchat.com/tutorials/how-to-build-a-messaging-site-with-react-whatsapp-clone
 https://www.cometchat.com/blog/peer-to-peer-chat
 https://en.wikipedia.org/wiki/Client%E2%80%93server_model
+https://de.wikipedia.org/wiki/Verschl%C3%BCsselung
+https://www.ibm.com/think/topics/asymmetric-encryption
