@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (MiKTeX 25.12) (format=lualatex 2026.8.20)  15 OCT 2026 14:52
+This is LuaHBTeX, Version 1.24.0 (MiKTeX 25.12) (format=lualatex 2026.8.20)  15 OCT 2026 22:37
  restricted system commands enabled.
 **c:/Users/berna/Documents/GitHub/chat_project/Latex_Arbeit/Main
 (c:/Users/berna/Documents/GitHub/chat_project/Latex_Arbeit/Main.tex
@@ -847,41 +847,41 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--12
+Underfull \hbox (badness 10000) in paragraph at lines 10--13
 
  []
 
 [4
 
-]) (./metadaten.tex
+]
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/sl' in size <12> not available
-(Font)              Font shape `TU/Arial(0)/m/it' tried instead on input line 1
-.
+(Font)              Font shape `TU/Arial(0)/m/it' tried instead on input line 2
+6.
 Package babel Info: 'ngerman' activates 'german' shorthands.
-(babel)             Reported on input line 1.
- [5]
+(babel)             Reported on input line 26.
+ [5]) (./metadaten.tex [6]
 Kapitel 4.
-) (./programm.tex [6
+) (./programm.tex [7
 
 ]
 Kapitel 5.
-[7
+[8
 
-]) (./unsere_methadaten.tex [8]
+]) (./unsere_methadaten.tex [9]
 Kapitel 6.
-) (./reflexion.tex [9
+) (./reflexion.tex [10
 
 ]
 Kapitel 7.
-) (./future_work.tex [10
+) (./future_work.tex [11
 
 ]
 Kapitel 8.
-) (./fazit.tex [11
+) (./fazit.tex [12
 
 ]
 Kapitel 9.
-) [12
+) [13
 
 ]
 (c:/Users/berna/Documents/GitHub/chat_project/Latex_Arbeit/build/Main.lof)
@@ -889,7 +889,7 @@ Kapitel 9.
 
 \openout5 = Main.lof
 
-[13
+[14
 
 ]
 Overfull \hbox (40.15115pt too wide) in paragraph at lines 31--31
@@ -918,9 +918,9 @@ Overfull \hbox (29.07693pt too wide) in paragraph at lines 31--31
 󰋳\TU/Arial(0)/m/n/12 : $\TU/lmtt/m/n/12 https : / / stackoverflow .
  []
 
-[14
+[15
 
-] [15]
+] [16]
 (c:/Users/berna/Documents/GitHub/chat_project/Latex_Arbeit/build/Main.aux)
  ***********
 LaTeX2e <2025-11-01>
@@ -934,10 +934,10 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 Here is how much of LuaTeX's memory you used:
  14744 strings out of 476081
  125165,1373583 words of node,token memory allocated
- 532 words of node memory still in use:
-   4 hlist, 1 vlist, 1 rule, 6 glue, 3 kern, 1 glyph, 9 attribute, 63 glue_spec,
+ 527 words of node memory still in use:
+   4 hlist, 1 vlist, 1 rule, 6 glue, 3 kern, 1 glyph, 9 attribute, 62 glue_spec,
  6 attribute_list, 1 write nodes
-   avail lists: 1:1,2:1037,3:520,4:20,5:165,6:76,7:5798,8:110,9:276,10:17,11:623
+   avail lists: 1:1,2:1037,3:520,4:20,5:166,6:76,7:8247,8:110,9:276,10:17,11:885
 
  36909 multiletter control sequences out of 65536+600000
  61 fonts using 17913911 bytes
@@ -945,9 +945,9 @@ Here is how much of LuaTeX's memory you used:
 <c:/users/berna/appdata/local/programs/miktex/fonts/opentype/public/lm/lmmono12-
 regular.otf><C:/WINDOWS/Fonts/arialni.ttf><C:/WINDOWS/Fonts/arialbd.ttf><C:/WIND
 OWS/Fonts/arial.ttf>
-Output written on Main.pdf (16 pages, 128500 bytes).
+Output written on Main.pdf (17 pages, 131938 bytes).
 
-PDF statistics: 81 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 84 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 1048576)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 

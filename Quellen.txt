@@ -24,3 +24,5 @@ https://en.wikipedia.org/wiki/Client%E2%80%93server_model
 https://de.wikipedia.org/wiki/Verschl%C3%BCsselung
 https://www.ibm.com/think/topics/asymmetric-encryption
 https://medium.com/@harshithgowdakt/deep-dive-into-tcp-sockets-how-data-travels-under-the-hood-7c16f6b2bf95
+https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol_Secure
+https://de.wikipedia.org/wiki/Hybride_Verschl%C3%BCsselung
