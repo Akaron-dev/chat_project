@@ -1,17 +1,17 @@
-This is LuaHBTeX, Version 1.24.0 (MiKTeX 25.12) (format=lualatex 2026.8.20)  13 OCT 2026 16:35
+This is LuaHBTeX, Version 1.24.0 (MiKTeX 25.12) (format=lualatex 2026.8.20)  15 OCT 2026 09:55
  restricted system commands enabled.
-**c:/Users/berna/Documents/GitHub/chat_project/Latex_Arbeit/Main
-(c:/Users/berna/Documents/GitHub/chat_project/Latex_Arbeit/Main.tex
+**c:/Users/timfr/OneDrive/Dokumente/GitHub/chat_project/Latex_Arbeit/Main
+(c:/Users/timfr/OneDrive/Dokumente/GitHub/chat_project/Latex_Arbeit/Main.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
 Lua module: luaotfload 2024-12-03 v3.29 Lua based OpenType font support
 Lua module: lualibs 2023-07-13 v2.76 ConTeXt Lua standard libraries.
 Lua module: lualibs-extended 2023-07-13 v2.76 ConTeXt Lua libraries -- extended 
 collection.
-luaotfload | conf : Root cache directory is "C:/Users/berna/AppData/Local/MiKTeX
+luaotfload | conf : Root cache directory is "C:/Users/timfr/AppData/Local/MiKTeX
 /luatex-cache/generic/names".
 luaotfload | init : Loading fontloader "fontloader-2023-12-28.lua" from kpse-res
-olved path "C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/luatex/luaotfload/f
+olved path "C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/luatex/luaotfload/f
 ontloader-2023-12-28.lua".
 Lua-only attribute luaotfload@noligature = 1
 luaotfload | init : Context OpenType loader version 3.134
@@ -20,7 +20,7 @@ Inserting `luaotfload.node_processor' in `hpack_filter'.
 Inserting `luaotfload.glyph_stream' in `glyph_stream_provider'.
 Inserting `luaotfload.define_font' in `define_font'.
 Lua-only attribute luaotfload_color_attribute = 2
-luaotfload | conf : Root cache directory is "C:/Users/berna/AppData/Local/MiKTeX
+luaotfload | conf : Root cache directory is "C:/Users/timfr/AppData/Local/MiKTeX
 /luatex-cache/generic/names".
 Inserting `luaotfload.harf.strip_prefix' in `find_opentype_file'.
 Inserting `luaotfload.harf.strip_prefix' in `find_truetype_file'.
@@ -39,12 +39,12 @@ Inserting `luaotfload.aux.fixup_fontdata' in `luaotfload.patch_font_unsafe'.
 Inserting `luaotfload.aux.set_capheight' in `luaotfload.patch_font'.
 Inserting `luaotfload.aux.set_xheight' in `luaotfload.patch_font'.
 Inserting `luaotfload.rewrite_fontname' in `luaotfload.patch_font'.
-Inserting `tracingstacklevels' in `input_level_string'. (C:/Users/berna/AppData
+Inserting `tracingstacklevels' in `input_level_string'. (C:/Users/timfr/AppData
 /Local/Programs/MiKTeX/tex/latex/base/book.cls
 Document Class: book 2025/01/22 v1.4n Standard LaTeX document class
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/base/bk12.clo
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/base/bk12.clo
 File: bk12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
-luaotfload | db : Font names database loaded from C:/Users/berna/AppData/Local/M
+luaotfload | db : Font names database loaded from C:/Users/timfr/AppData/Local/M
 iKTeX/luatex-cache/generic/names/luaotfload-names.luc.gz)
 \c@part=\count273
 \c@chapter=\count274
@@ -59,38 +59,38 @@ iKTeX/luatex-cache/generic/names/luaotfload-names.luc.gz)
 \belowcaptionskip=\skip50
 \bibindent=\dimen147
 )
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphicx.sty
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
 
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/graphics/keyval.sty
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
 )
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphics.sty
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
 
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/graphics/trig.sty
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/graphics/trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
 )
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/graphics.c
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/graphics.c
 fg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: luatex.def on input line 106.
 
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/graphics-def/luatex.def
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/graphics-def/luatex.def
 File: luatex.def 2025/09/29 v1.2f Graphics/color driver for luatex
 ))
 \Gin@req@height=\dimen148
 \Gin@req@width=\dimen149
 )
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec.sty
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/l3packages/xparse/xpars
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec.sty
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/l3packages/xparse/xpars
 e.sty
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/l3kernel/expl3.sty
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/l3kernel/expl3.sty
 Package: expl3 2025-12-24 L3 programming layer (loader) 
 
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-lua
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-lua
 tex.def
 File: l3backend-luatex.def 2025-10-09 L3 backend support: PDF output (LuaTeX)
 \l__color_backend_stack_int=\count282
@@ -99,7 +99,7 @@ Package: xparse 2025-10-09 L3 Experimental document command parser
 )
 Package: fontspec 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
 Lua module: fontspec 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec-luate
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec-luate
 x.sty
 Package: fontspec-luatex 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaT
 eX
@@ -117,14 +117,14 @@ eX
 \l__fontspec_tmpa_dim=\dimen150
 \l__fontspec_tmpb_dim=\dimen151
 \l__fontspec_tmpc_dim=\dimen152
- (C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/base/fontenc.sty
+ (C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/base/fontenc.sty
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
-) (C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec.cfg
-))) (C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/generic/babel/babel.sty
+) (C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/fontspec/fontspec.cfg
+))) (C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/generic/babel/babel.sty
 Package: babel 2025/12/11 v25.17 The multilingual framework for LuaLaTeX, pdfLa
 TeX and XeLaTeX
 
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/generic/babel/luababel.def
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/generic/babel/luababel.def
 \bbl@readstream=\read2
 \l@afrikaans=\language2
 Package babel Info: Non-standard hyphenation setup on input line 118.
@@ -225,7 +225,7 @@ on input line 2101.
 \U@D=\dimen153
 \l@unhyphenated=\language79
 
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/generic/babel/luababel.def
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/generic/babel/luababel.def
 \bbl@attr@locale=\attribute4
 )
 Package babel Info: Configuration files are deprecated, as
@@ -235,36 +235,36 @@ Package babel Info: Configuration files are deprecated, as
 *************************************
 * Local config file bblopts.cfg used
 *
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/arabi/bblopts.cfg
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/arabi/bblopts.cfg
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/generic/babel/locale/invalid/
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/generic/babel/locale/invalid/
 babel-ngerman.tex)
 Package babel Info: Importing font and identification data for ngerman
 (babel)             from babel-de.ini. Reported on input line 4320.
 
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/babel-german/ngerman.ld
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/babel-german/ngerman.ld
 f
 Language: ngerman 
 
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/babel-german/babel-germ
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/babel-german/babel-germ
 an.def
 Package babel Info: Making " an active character on input line 500.
 
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/generic/hyph-utf8/loadhyph/lo
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/generic/hyph-utf8/loadhyph/lo
 adhyph-de-1996.tex UTF-8 German hyphenation patterns (reformed orthography)
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/generic/hyph-utf8/patterns/te
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/generic/hyph-utf8/patterns/te
 x/hyph-de-1996.tex
 German Hyphenation Patterns (Reformed Orthography, 2006) `dehyphn-x' 2024-02-28
  (WL))))))
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.sty
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.sty
 Package: geometry 2026/03/07 v6.0 Page Geometry
 
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/generic/iftex/ifvtex.sty
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/generic/iftex/iftex.sty
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/generic/iftex/iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
 \Gm@cnth=\count295
@@ -280,45 +280,45 @@ Package: iftex 2024/12/12 v1.0g TeX engine tests
 \Gm@layoutvoffset=\dimen161
 \Gm@dimlist=\toks18
 
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.cfg)) (C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.sty
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.cfg)) (C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
 
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/generic/pdftexcmds/pdftexcmds
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/generic/pdftexcmds/pdftexcmds
 .sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/generic/infwarerr/infwarerr.s
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/generic/infwarerr/infwarerr.s
 ty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/generic/ltxcmds/ltxcmds.sty
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 \pdftexcmds@toks=\toks19
-) (C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/etoolbox/etoolbox.sty
+) (C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count298
 )
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/kvoptions/kvoptions.sty
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/kvsetkeys/kvsetkeys.sty
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-)) (C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/logreq/logreq.sty
+)) (C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
 \lrq@indent=\count299
 
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/logreq/logreq.def
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/base/ifthen.sty
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/base/ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 )
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -382,7 +382,7 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-dm.def
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-dm.def
 File: blx-dm.def 2025/07/10 v3.21 biblatex datamodel (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex custom data model...
@@ -472,17 +472,17 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 Package biblatex Info: Trying to load enhanced support for Unicode engines...
 Package biblatex Info: ... file 'blx-unicode.def' found.
 
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-unicode.de
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-unicode.de
 f)
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-compat.def
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-compat.def
 File: blx-compat.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
- (C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.def
+ (C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
 \c@textcitecount=\count414
 \c@textcitetotal=\count415
@@ -501,13 +501,13 @@ File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
 
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/bbx/numeric.bb
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/bbx/numeric.bb
 x
 File: numeric.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
 
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/bbx/standard.b
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/bbx/standard.b
 bx
 File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
 \c@bbx:relatedcount=\count423
@@ -516,7 +516,7 @@ File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
 
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/cbx/numeric.cb
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/cbx/numeric.cb
 x
 File: numeric.cbx 2025/07/10 v3.21 biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
@@ -534,7 +534,7 @@ Package biblatex Info: Redefining '\smartcites'.
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
 
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.cfg
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
 )
 Package biblatex Info: LuaTeX detected.
@@ -545,11 +545,11 @@ Package biblatex Info: ... and expl3
 (biblatex)             is new enough (at least 2020/04/06),
 (biblatex)             setting 'casechanger=expl3'.
 
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-case-expl3
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-case-expl3
 .sty
 Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
 ))
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/csquotes/csquotes.sty
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2026-05-19 v5.2p context-sensitive quotations (JAW)
 \csq@reset=\count425
 \csq@gtype=\count426
@@ -559,19 +559,19 @@ Package: csquotes 2026-05-19 v5.2p context-sensitive quotations (JAW)
 \csq@tshold=\count430
 \csq@ltx@everypar=\toks20
 
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/csquotes/csquotes.def
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/csquotes/csquotes.def
 File: csquotes.def 2026-05-19 v5.2p csquotes generic definitions (JAW)
 )
 Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
 Package csquotes Info: ... configuration file loaded successfully.
 
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/csquotes/csquotes.cfg
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/csquotes/csquotes.cfg
 File: csquotes.cfg 
-)) (C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/setspace/setspace.st
+)) (C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/setspace/setspace.st
 y
 Package: setspace 2022/12/04 v6.7b set line spacing
 )
-luaotfload | cache : Lookup cache loaded from C:/Users/berna/AppData/Local/MiKTe
+luaotfload | cache : Lookup cache loaded from C:/Users/timfr/AppData/Local/MiKTe
 X/luatex-cache/generic/names/luaotfload-lookup-cache.luc.
 
 Package fontspec Info: 
@@ -604,7 +604,9 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'ngerman'.
-(c:/Users/berna/Documents/GitHub/chat_project/Latex_Arbeit/build/Main.aux
+
+(c:/Users/timfr/OneDrive/Dokumente/GitHub/chat_project/Latex_Arbeit/build/Main.
+aux
 Package babel Info: 'ngerman' activates 'german' shorthands.
 (babel)             Reported on input line 6.
 )
@@ -627,7 +629,7 @@ LaTeX Font Info:    ... okay on input line 15.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
 
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mk
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count431
@@ -642,13 +644,13 @@ ii
 \makeMPintoPDFobject=\count436
 \everyMPtoPDFconversion=\toks22
 )
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-b
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-b
 ase.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/00miktex/epstopdf-sys.c
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/00miktex/epstopdf-sys.c
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
@@ -748,19 +750,19 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 Package biblatex Info: Trying to load language 'ngerman'...
 Package biblatex Info: ... file 'ngerman.lbx' found.
 
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/lbx/ngerman.lb
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/lbx/ngerman.lb
 x
 File: ngerman.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
 Package biblatex Info: Trying to load language 'german'...
 Package biblatex Info: ... file 'german.lbx' found.
 
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/lbx/german.lbx
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/lbx/german.lbx
 File: german.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load language 'german'...
 Package biblatex Info: ... file 'german.lbx' found.
 
-(C:/Users/berna/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/lbx/german.lbx
+(C:/Users/timfr/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/lbx/german.lbx
 File: german.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
 ))
 Package biblatex Info: LuaTeX detected.
@@ -771,11 +773,12 @@ Package biblatex Info: Automatic encoding selection.
 \openout3 = Main.bcf
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Main.bbl' found.
- (c:/Users/berna/Documents/GitHub/chat_project/Latex_Arbeit/build/Main.bbl)
+
+(c:/Users/timfr/OneDrive/Dokumente/GitHub/chat_project/Latex_Arbeit/build/Main.
+bbl)
 Package biblatex Info: Reference section=0 on input line 15.
 Package biblatex Info: Reference segment=0 on input line 15.
-
-(./titelblatt.tex
+ (./titelblatt.tex
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: luatex
 * paper: a4paper
@@ -812,13 +815,13 @@ Package biblatex Info: Reference segment=0 on input line 15.
 
 
 
-{C:/Users/berna/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}])
-(c:/Users/berna/Documents/GitHub/chat_project/Latex_Arbeit/build/Main.toc)
+{C:/Users/timfr/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}])
+(c:/Users/timfr/OneDrive/Dokumente/GitHub/chat_project/Latex_Arbeit/build/Main.
+toc)
 \tf@toc=\write4
 
 \openout4 = Main.toc
-
-(./einleitung.tex [1
+ (./einleitung.tex [1
 
 ]
 Kapitel 1.
@@ -862,12 +865,12 @@ Kapitel 9.
 ) [10
 
 ]
-(c:/Users/berna/Documents/GitHub/chat_project/Latex_Arbeit/build/Main.lof)
+(c:/Users/timfr/OneDrive/Dokumente/GitHub/chat_project/Latex_Arbeit/build/Main.
+lof)
 \tf@lof=\write5
 
 \openout5 = Main.lof
-
-[11
+ [11
 
 ]
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -899,7 +902,9 @@ Overfull \hbox (29.07693pt too wide) in paragraph at lines 31--31
 
 [12
 
-] (c:/Users/berna/Documents/GitHub/chat_project/Latex_Arbeit/build/Main.aux)
+]
+(c:/Users/timfr/OneDrive/Dokumente/GitHub/chat_project/Latex_Arbeit/build/Main.
+aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -910,19 +915,19 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 14721 strings out of 476081
+ 14723 strings out of 476081
  125165,1373583 words of node,token memory allocated
  514 words of node memory still in use:
    4 hlist, 1 vlist, 1 rule, 5 glue, 3 kern, 1 glyph, 7 attribute, 62 glue_spec,
  5 attribute_list, 1 write nodes
    avail lists: 1:2,2:964,3:490,4:20,5:74,6:50,7:5361,8:110,9:144,10:17,11:600
- 36886 multiletter control sequences out of 65536+600000
- 47 fonts using 13550223 bytes
- 73i,5n,92p,1303b,2367s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/users/berna/appdata/local/programs/miktex/fonts/opentype/public/lm/lmmono12-
+ 36888 multiletter control sequences out of 65536+600000
+ 49 fonts using 15071519 bytes
+ 73i,5n,92p,1312b,2367s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/users/timfr/appdata/local/programs/miktex/fonts/opentype/public/lm/lmmono12-
 regular.otf><C:/WINDOWS/Fonts/arialni.ttf><C:/WINDOWS/Fonts/arialbd.ttf><C:/WIND
 OWS/Fonts/arial.ttf>
-Output written on Main.pdf (13 pages, 113727 bytes).
+Output written on Main.pdf (13 pages, 115341 bytes).
 
 PDF statistics: 72 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 1048576)
