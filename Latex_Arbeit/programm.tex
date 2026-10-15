@@ -1,4 +1,36 @@
 \chapter{Unser Programm}
+
 \section{Architektur und Systemübersicht}
 
 \subsection{Das Client-Server-Modell}
+Für unseren Ansatz eines Messengers haben wir uns aus vielen rein praktischen Gründen für ein Client-Server Modell entschieden.
+Denn da die meisten modernen Messenger ebenfalls so funktionieren hatten wir somit Zugang zu vielen Informationen von bereits funktionierenden
+Systemen. Dazu kommt das wir bereits im besitz eines Servers (ein alter Büro-Pc) waren.
+
+\subsection{Kommunikationsprotokoll}
+Für die Kommunikation zwischen Server und Client sind TCP-Sockets zuständig. Diese TCP-Sockets erstellen eine Verbindung zwischen den beiden
+Geräten mithilfe von IP-Adressen und Ports. Wie es der Name schon sagt nutzen die TCP-Sockets das Kommunikationsprotokoll TCP 
+(Transmission Control Protocol). Das TCP nutzt ein lokaler TCB (Transmission Control Block), in diesem sind wichtige Informationen gespeichert, 
+unter anderem die IP-Adresse und den Port des Partner Sockets, den Verbindungsstatus (verbunden, wartend, geschlossen, etc.), welche Daten noch 
+gesendet oder gelesen werden müssen und die Sequence Numbers welche die Reihenfolge der Empfangenen und Versendeten Bytes festhalten. Dieser 
+letzte Punkt ist für unsere Anwendung der Punkt der dieses Kommunikationsprotokoll von anderen Abhebt, denn so kann man sicher sein das die zu 
+versendenden Daten vollständig und Fehlerfrei ankommen in dem man einfach die Sequence Numbers vergleicht.  
+
+\subsection{Datenfluss}
+Wenn jetzt jemand den Messenger öffnet und eine Nachricht versenden will wird erst eine TCP Verbindung zum Server aufgebaut und die Identität 
+überprüft. Dann wird die Nachricht noch lokal verschlüsselt und in die Nachrichtenstruktur eingebunden. Wenn jetzt jemand den Messenger öffnet 
+und eine Nachricht versenden will wird erst eine TCP Verbindung zum Server aufgebaut und die Identität überprüft. Dann wird die Nachricht noch 
+lokal verschlüsselt und in die Nachrichtenstruktur eingebunden. Im ersten Teil wird festgehalten welchem Zweck die Nachricht dient, 0 steht für 
+Login oder Account erstellen, 100 steht für eine Statusnachricht an den Server und 200 für eine Nachricht an einen anderen Benutzer. All diese 
+Nachrichten Kategorien brauchen dann unterschiedliche weitere Informationen wie die Nachricht, die Zeit oder den Sessionkey welcher die 
+Unterschrift für das gesendete darstellt. Erst jetzt wird dieses ganze Paket an den Server versendet, dort wird es entpackt und in die einzelnen 
+Bestandteile aufgetrennt. Jetzt in dem Fall das es sich um eine Nachricht an einen anderen Benutzer handelt schaut der Server ob dieser Benutzer 
+im Moment online ist und falls ja verpackt er die Nachricht wieder mit den notwendigen Informationen und sendet sie weiter. Falls der Empfänger 
+nicht online sein sollte wird die Nachricht auf dem Server gespeichert, bis der Empfänger sich das nächste mal mit dem Server verbindet.  
+
+\section{Server-Hardware und Betriebsumgebung}
+
+\subsection{Hardware-Basis}
+Als Grundlage für unseren Server dient ein Lenovo Thinkcenter mit eînem Intel i7-xxxx und 8GB Arbeitsspeicher, auch wenn das nach nicht
+sonderlich viel klingt ist es trotzdem mehr als genug Rechenleistung um mehrere Benutzer gleichzeitig zu handhaben. Dazu kommt das ein solcher 
+kleiner PC für die Last die wir erwarten viel effizienter ist. 

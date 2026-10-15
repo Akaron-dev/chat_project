@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (MiKTeX 25.12) (format=lualatex 2026.8.20)  15 OCT 2026 10:02
+This is LuaHBTeX, Version 1.24.0 (MiKTeX 25.12) (format=lualatex 2026.8.20)  15 OCT 2026 11:38
  restricted system commands enabled.
 **c:/Users/timfr/OneDrive/Dokumente/GitHub/chat_project/Latex_Arbeit/Main
 (c:/Users/timfr/OneDrive/Dokumente/GitHub/chat_project/Latex_Arbeit/Main.tex
@@ -863,23 +863,23 @@ Kapitel 4.
 
 ]
 Kapitel 5.
-) (./unsere_methadaten.tex [7
+[7
 
-]
+]) (./unsere_methadaten.tex [8]
 Kapitel 6.
-) (./reflexion.tex [8
+) (./reflexion.tex [9
 
 ]
 Kapitel 7.
-) (./future_work.tex [9
+) (./future_work.tex [10
 
 ]
 Kapitel 8.
-) (./fazit.tex [10
+) (./fazit.tex [11
 
 ]
 Kapitel 9.
-) [11
+) [12
 
 ]
 (c:/Users/timfr/OneDrive/Dokumente/GitHub/chat_project/Latex_Arbeit/build/Main.
@@ -887,7 +887,7 @@ lof)
 \tf@lof=\write5
 
 \openout5 = Main.lof
- [12
+ [13
 
 ]
 Overfull \hbox (40.15115pt too wide) in paragraph at lines 31--31
@@ -910,7 +910,7 @@ Overfull \hbox (29.07693pt too wide) in paragraph at lines 31--31
 󰋳\TU/Arial(0)/m/n/12 : $\TU/lmtt/m/n/12 https : / / stackoverflow .
  []
 
-[13
+[14
 
 ]
 (c:/Users/timfr/OneDrive/Dokumente/GitHub/chat_project/Latex_Arbeit/build/Main.
@@ -930,16 +930,16 @@ Here is how much of LuaTeX's memory you used:
  527 words of node memory still in use:
    4 hlist, 1 vlist, 1 rule, 6 glue, 3 kern, 1 glyph, 9 attribute, 62 glue_spec,
  6 attribute_list, 1 write nodes
-   avail lists: 1:1,2:964,3:490,4:20,5:132,6:66,7:5360,8:110,9:220,10:17,11:600
+   avail lists: 1:1,2:964,3:490,4:20,5:148,6:71,7:5797,8:110,9:248,10:17,11:623
  36897 multiletter control sequences out of 65536+600000
  61 fonts using 17913591 bytes
  73i,8n,92p,1312b,2367s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/users/timfr/appdata/local/programs/miktex/fonts/opentype/public/lm/lmmono12-
 regular.otf><C:/WINDOWS/Fonts/arialni.ttf><C:/WINDOWS/Fonts/arialbd.ttf><C:/WIND
 OWS/Fonts/arial.ttf>
-Output written on Main.pdf (14 pages, 120545 bytes).
+Output written on Main.pdf (15 pages, 125577 bytes).
 
-PDF statistics: 75 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 78 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 1048576)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 

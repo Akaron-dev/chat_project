@@ -21,3 +21,4 @@ https://www.cometchat.com/blog/chat-application-architecture-and-system-design
 https://www.cometchat.com/tutorials/how-to-build-a-messaging-site-with-react-whatsapp-clone
 https://www.cometchat.com/blog/peer-to-peer-chat
 https://en.wikipedia.org/wiki/Client%E2%80%93server_model
+https://medium.com/@harshithgowdakt/deep-dive-into-tcp-sockets-how-data-travels-under-the-hood-7c16f6b2bf95
