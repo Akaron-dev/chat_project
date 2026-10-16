@@ -18,11 +18,11 @@ versendenden Daten vollständig und Fehlerfrei ankommen in dem man einfach die S
 
 \subsection{Datenfluss}
 Wenn jetzt jemand den Messenger öffnet und eine Nachricht versenden will wird erst eine TCP Verbindung zum Server aufgebaut und die Identität 
-überprüft. Dann wird die Nachricht noch lokal verschlüsselt und in die Nachrichtenstruktur eingebunden. Wenn jetzt jemand den Messenger öffnet 
-und eine Nachricht versenden will wird erst eine TCP Verbindung zum Server aufgebaut und die Identität überprüft. Dann wird die Nachricht noch 
-lokal verschlüsselt und in die Nachrichtenstruktur eingebunden. Im ersten Teil wird festgehalten welchem Zweck die Nachricht dient, 0 steht für 
-Login oder Account erstellen, 100 steht für eine Statusnachricht an den Server und 200 für eine Nachricht an einen anderen Benutzer. All diese 
-Nachrichten Kategorien brauchen dann unterschiedliche weitere Informationen wie die Nachricht, die Zeit oder den Sessionkey welcher die 
+des Absenders überprüft. Dann wird die Nachricht noch lokal verschlüsselt und in die Nachrichtenstruktur eingebunden. Wenn jetzt jemand den 
+Messenger öffnet und eine Nachricht versenden will wird erst eine TCP Verbindung zum Server aufgebaut und die Identität überprüft. Dann wird die 
+Nachricht noch lokal verschlüsselt und in die Nachrichtenstruktur eingebunden. Im ersten Teil wird festgehalten welchem Zweck die Nachricht dient,
+0 steht für Login oder Account erstellen, 100 steht für eine Statusnachricht an den Server und 200 für eine Nachricht an einen anderen Benutzer. 
+All diese Nachrichten Kategorien brauchen dann unterschiedliche weitere Informationen wie die Nachricht, die Zeit oder den Sessionkey welcher die 
 Unterschrift für das gesendete darstellt. Erst jetzt wird dieses ganze Paket an den Server versendet, dort wird es entpackt und in die einzelnen 
 Bestandteile aufgetrennt. Jetzt in dem Fall das es sich um eine Nachricht an einen anderen Benutzer handelt schaut der Server ob dieser Benutzer 
 im Moment online ist und falls ja verpackt er die Nachricht wieder mit den notwendigen Informationen und sendet sie weiter. Falls der Empfänger 
@@ -34,3 +34,25 @@ nicht online sein sollte wird die Nachricht auf dem Server gespeichert, bis der 
 Als Grundlage für unseren Server dient ein Lenovo Thinkcenter mit eînem Intel i7-xxxx und 8GB Arbeitsspeicher, auch wenn das nach nicht
 sonderlich viel klingt ist es trotzdem mehr als genug Rechenleistung um mehrere Benutzer gleichzeitig zu handhaben. Dazu kommt das ein solcher 
 kleiner PC für die Last die wir erwarten viel effizienter ist. 
+
+\subsection{Ressourcenbelastung und Netzwerkanbindung}
+
+\subsection{Betriebssystem und Programmiersprache}
+
+\section{Server-Side: Das Backend}
+
+\subsection{Netzwerk und Verbindungsmanagement}
+
+\subsection{Datenpersistenz und Datenbank}
+
+\subsection{Sicherheit und Authentifizierung auf Serverseite}
+
+\section{Clientside: Benutzeroberfläche und Client-Logik}
+
+\subsection{Verbindungsaufbau}
+
+\subsection{Asynchrone Nachrichtenverarbeitung}
+
+\subsection{Kryptographie und Datenintegrität}
+
+\section{Zusammenfassung}
