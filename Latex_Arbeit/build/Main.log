@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (MiKTeX 25.12) (format=lualatex 2026.8.20)  16 OCT 2026 10:19
+This is LuaHBTeX, Version 1.24.0 (MiKTeX 25.12) (format=lualatex 2026.8.20)  16 OCT 2026 10:22
  restricted system commands enabled.
 **c:/Users/timfr/OneDrive/Dokumente/GitHub/chat_project/Latex_Arbeit/Main
 (c:/Users/timfr/OneDrive/Dokumente/GitHub/chat_project/Latex_Arbeit/Main.tex
@@ -849,37 +849,42 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 5.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 5.
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--13
+
+ []
+
 [4
 
-]) (./metadaten.tex
+]
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/sl' in size <12> not available
-(Font)              Font shape `TU/Arial(0)/m/it' tried instead on input line 1
-.
+(Font)              Font shape `TU/Arial(0)/m/it' tried instead on input line 2
+6.
 Package babel Info: 'ngerman' activates 'german' shorthands.
-(babel)             Reported on input line 1.
- [5]
+(babel)             Reported on input line 26.
+ [5]) (./metadaten.tex [6]
 Kapitel 4.
-) (./programm.tex [6
+) (./programm.tex [7
 
 ]
 Kapitel 5.
-[7
+[8
 
-]) (./unsere_methadaten.tex [8]
+]) (./unsere_methadaten.tex [9]
 Kapitel 6.
-) (./reflexion.tex [9
+) (./reflexion.tex [10
 
 ]
 Kapitel 7.
-) (./future_work.tex [10
+) (./future_work.tex [11
 
 ]
 Kapitel 8.
-) (./fazit.tex [11
+) (./fazit.tex [12
 
 ]
 Kapitel 9.
-) [12
+) [13
 
 ]
 (c:/Users/timfr/OneDrive/Dokumente/GitHub/chat_project/Latex_Arbeit/build/Main.
@@ -887,7 +892,7 @@ lof)
 \tf@lof=\write5
 
 \openout5 = Main.lof
- [13
+ [14
 
 ]
 Overfull \hbox (40.15115pt too wide) in paragraph at lines 31--31
@@ -904,15 +909,21 @@ rial(0)/m/n/12 : $\TU/lmtt/m/n/12 https : / / www . geeksforgeeks .
  []
 
 
+Overfull \hbox (3.63367pt too wide) in paragraph at lines 31--31
+\TU/lmtt/m/n/12 how - data - travels - under - the - hood - 7c16f6b2bf95$ \TU/A
+rial(0)/m/n/12 (be-sucht am 14. 10. 2026). 
+ []
+
+
 Overfull \hbox (29.07693pt too wide) in paragraph at lines 31--31
 []\TU/Arial(0)/m/n/12 ron roth-man. \TU/Arial(0)/m/it/12 Con-ver-ting epoch time
  in-to the da-te-time\TU/Arial(0)/m/n/12 . 2023. \TU/Arial(0)/m/sc/12 󰋼󰋹
 󰋳\TU/Arial(0)/m/n/12 : $\TU/lmtt/m/n/12 https : / / stackoverflow .
  []
 
-[14
+[15
 
-]
+] [16]
 (c:/Users/timfr/OneDrive/Dokumente/GitHub/chat_project/Latex_Arbeit/build/Main.
 aux)
  ***********
@@ -925,21 +936,22 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 14732 strings out of 476081
+ 14744 strings out of 476081
  125165,1373583 words of node,token memory allocated
  527 words of node memory still in use:
    4 hlist, 1 vlist, 1 rule, 6 glue, 3 kern, 1 glyph, 9 attribute, 62 glue_spec,
  6 attribute_list, 1 write nodes
-   avail lists: 1:1,2:964,3:490,4:23,5:256,6:96,7:5807,8:110,9:430,10:18,11:626
- 36897 multiletter control sequences out of 65536+600000
- 61 fonts using 17913591 bytes
+   avail lists: 1:2,2:1037,3:520,4:23,5:257,6:98,7:8247,8:110,9:430,10:18,11:885
+
+ 36909 multiletter control sequences out of 65536+600000
+ 61 fonts using 17913911 bytes
  73i,8n,92p,1312b,2367s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/users/timfr/appdata/local/programs/miktex/fonts/opentype/public/lm/lmmono12-
 regular.otf><C:/WINDOWS/Fonts/arialni.ttf><C:/WINDOWS/Fonts/arialbd.ttf><C:/WIND
 OWS/Fonts/arial.ttf>
-Output written on Main.pdf (15 pages, 127474 bytes).
+Output written on Main.pdf (17 pages, 133560 bytes).
 
-PDF statistics: 78 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 84 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 1048576)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 

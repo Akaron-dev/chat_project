@@ -118,6 +118,38 @@
       \verb https://tex.stackexchange.com/questions/82664/when-to-use-par-and-when-newline-or-blank-lines
       \endverb
     \endentry
+    \entry{harshith_tcp}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=58f78dea7308571db7a614c596e59355}{%
+           family={{Harshith}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{58f78dea7308571db7a614c596e59355}
+      \strng{fullhash}{58f78dea7308571db7a614c596e59355}
+      \strng{fullhashraw}{58f78dea7308571db7a614c596e59355}
+      \strng{bibnamehash}{58f78dea7308571db7a614c596e59355}
+      \strng{authorbibnamehash}{58f78dea7308571db7a614c596e59355}
+      \strng{authornamehash}{58f78dea7308571db7a614c596e59355}
+      \strng{authorfullhash}{58f78dea7308571db7a614c596e59355}
+      \strng{authorfullhashraw}{58f78dea7308571db7a614c596e59355}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Deep Dive into TCP Sockets: How Data Travels Under the Hood}
+      \field{urlday}{14}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://medium.com/@harshithgowdakt/deep-dive-into-tcp-sockets-how-data-travels-under-the-hood-7c16f6b2bf95
+      \endverb
+      \verb{url}
+      \verb https://medium.com/@harshithgowdakt/deep-dive-into-tcp-sockets-how-data-travels-under-the-hood-7c16f6b2bf95
+      \endverb
+    \endentry
     \entry{heise_listoffigures}{online}{}{}
       \name{author}{1}{}{%
         {{hash=9149fef06b99ec2c3ad0f70404a17a68}{%
