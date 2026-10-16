@@ -1,15 +1,15 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'build\Main.blg'
-[290] biber-MSWIN64:342> INFO - === 
-[511] Biber.pm:421> INFO - Reading 'build\Main.bcf'
-[600] Biber.pm:999> INFO - Using all citekeys in bib section 0
-[609] Biber.pm:4487> INFO - Processing section 0
-[632] Biber.pm:4678> INFO - Looking for bibtex file 'quellen.bib' for section 0
-[686] bibtex.pm:1713> INFO - LaTeX decoding ...
-[723] bibtex.pm:1519> INFO - Found BibTeX data source 'quellen.bib'
-[833] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[833] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[833] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'de-DE'
-[833] Biber.pm:4313> INFO - No sort tailoring available for locale 'de-DE'
-[893] bbl.pm:676> INFO - Writing 'build\Main.bbl' with encoding 'UTF-8'
-[898] bbl.pm:779> INFO - Output to build\Main.bbl
+[106] biber-MSWIN64:342> INFO - === 
+[145] Biber.pm:421> INFO - Reading 'build\Main.bcf'
+[245] Biber.pm:999> INFO - Using all citekeys in bib section 0
+[257] Biber.pm:4487> INFO - Processing section 0
+[267] Biber.pm:4678> INFO - Looking for bibtex file 'quellen.bib' for section 0
+[327] bibtex.pm:1713> INFO - LaTeX decoding ...
+[338] bibtex.pm:1519> INFO - Found BibTeX data source 'quellen.bib'
+[433] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[433] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[433] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[433] Biber.pm:4313> INFO - No sort tailoring available for locale 'de-DE'
+[454] bbl.pm:676> INFO - Writing 'build\Main.bbl' with encoding 'UTF-8'
+[460] bbl.pm:779> INFO - Output to build\Main.bbl
