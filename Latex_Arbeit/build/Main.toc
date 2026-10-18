@@ -1,36 +1,50 @@
 \babel@toc {ngerman}{}\relax 
-\contentsline {chapter}{\numberline {1}Einleitung}{2}{}%
-\contentsline {chapter}{\numberline {2}Motivation}{3}{}%
-\contentsline {chapter}{\numberline {3}Client-Server-Struktur}{4}{}%
-\contentsline {section}{\numberline {3.1}Funktionsprinzip der Client-Server-Struktur}{4}{}%
-\contentsline {subsection}{\numberline {3.1.1}Der Aufbau}{5}{}%
-\contentsline {subsection}{\numberline {3.1.2}Verbindung zwischen Client und Server}{5}{}%
-\contentsline {subsection}{\numberline {3.1.3}Kryptologie}{5}{}%
-\contentsline {subsubsection}{asymmetrische Verschlüsselung}{5}{}%
-\contentsline {subsubsection}{Hybrid-Kryptosystem}{6}{}%
-\contentsline {section}{\numberline {3.2}Vergleich mit anderen Strukturen}{6}{}%
-\contentsline {chapter}{\numberline {4}Die Metadaten}{7}{}%
-\contentsline {chapter}{\numberline {5}Unser Programm}{8}{}%
-\contentsline {section}{\numberline {5.1}Architektur und Systemübersicht}{8}{}%
-\contentsline {subsection}{\numberline {5.1.1}Das Client-Server-Modell}{8}{}%
-\contentsline {subsection}{\numberline {5.1.2}Kommunikationsprotokoll}{8}{}%
-\contentsline {subsection}{\numberline {5.1.3}Datenfluss}{8}{}%
-\contentsline {section}{\numberline {5.2}Server-Hardware und Betriebsumgebung}{9}{}%
-\contentsline {subsection}{\numberline {5.2.1}Hardware-Basis}{9}{}%
-\contentsline {subsection}{\numberline {5.2.2}Ressourcenbelastung und Netzwerkanbindung}{9}{}%
-\contentsline {subsection}{\numberline {5.2.3}Betriebssystem und Programmiersprache}{9}{}%
-\contentsline {section}{\numberline {5.3}Server-Side: Das Backend}{9}{}%
-\contentsline {subsection}{\numberline {5.3.1}Netzwerk und Verbindungsmanagement}{9}{}%
-\contentsline {subsection}{\numberline {5.3.2}Datenpersistenz und Datenbank}{9}{}%
-\contentsline {subsection}{\numberline {5.3.3}Sicherheit und Authentifizierung auf Serverseite}{9}{}%
-\contentsline {section}{\numberline {5.4}Clientside: Benutzeroberfläche und Client-Logik}{9}{}%
-\contentsline {subsection}{\numberline {5.4.1}Verbindungsaufbau}{9}{}%
-\contentsline {subsection}{\numberline {5.4.2}Asynchrone Nachrichtenverarbeitung}{9}{}%
-\contentsline {subsection}{\numberline {5.4.3}Kryptographie und Datenintegrität}{9}{}%
-\contentsline {section}{\numberline {5.5}Zusammenfassung}{9}{}%
-\contentsline {chapter}{\numberline {6}Metadaten in unserem Programm}{10}{}%
-\contentsline {chapter}{\numberline {7}Reflexion}{11}{}%
-\contentsline {chapter}{\numberline {8}Future Work}{12}{}%
-\contentsline {chapter}{\numberline {9}Fazit}{13}{}%
-\contentsline {chapter}{Abbildungsverzeichnis}{14}{}%
-\contentsline {chapter}{Quellenverzeichnis}{15}{}%
+\contentsline {chapter}{\numberline {1}Einleitung}{3}{}%
+\contentsline {chapter}{\numberline {2}Motivation}{4}{}%
+\contentsline {chapter}{\numberline {3}Client-Server-Struktur}{5}{}%
+\contentsline {section}{\numberline {3.1}Funktionsprinzip der Client-Server-Struktur}{5}{}%
+\contentsline {subsection}{\numberline {3.1.1}Der Aufbau}{6}{}%
+\contentsline {subsection}{\numberline {3.1.2}Verbindung zwischen Client und Server}{6}{}%
+\contentsline {subsection}{\numberline {3.1.3}Kryptologie}{6}{}%
+\contentsline {subsubsection}{asymmetrische Verschlüsselung}{6}{}%
+\contentsline {subsubsection}{Hybrid-Kryptosystem}{7}{}%
+\contentsline {section}{\numberline {3.2}Vergleich mit anderen Strukturen}{7}{}%
+\contentsline {chapter}{\numberline {4}Die Metadaten}{8}{}%
+\contentsline {section}{\numberline {4.1}Begriffsbestimmung und Klassifikation}{8}{}%
+\contentsline {subsection}{\numberline {4.1.1}Inhaltsdaten versus Metadaten}{8}{}%
+\contentsline {subsection}{\numberline {4.1.2}Dimensionen von Metadaten}{9}{}%
+\contentsline {section}{\numberline {4.2}Entstehung von Metadaten im Netzwerk}{9}{}%
+\contentsline {subsection}{\numberline {4.2.1}Metadaten auf Protokollebene (Transport \& IP)}{9}{}%
+\contentsline {subsection}{\numberline {4.2.2}Metadaten auf Anwendungsebene}{9}{}%
+\contentsline {section}{\numberline {4.3}Das Sicherheitsproblem: Die Aussagekraft von Metadaten}{9}{}%
+\contentsline {subsection}{\numberline {4.3.1}Traffic Analysis und Datenkorrelation}{9}{}%
+\contentsline {subsection}{\numberline {4.3.2}Profilbildung und Beziehungsnetzwerke}{9}{}%
+\contentsline {subsection}{\numberline {4.3.3}Rechtlicher und gesellschaftlicher Kontext}{9}{}%
+\contentsline {section}{\numberline {4.4}Konzepte zur Metadaten-Minimierung}{9}{}%
+\contentsline {subsection}{\numberline {4.4.1}Bekannte Lösungsansätze}{9}{}%
+\contentsline {subsection}{\numberline {4.4.2}Das Trilemma: Sicherheit, Effizienz und Usability}{9}{}%
+\contentsline {section}{\numberline {4.5}Zusammenfassung}{9}{}%
+\contentsline {chapter}{\numberline {5}Unser Programm}{10}{}%
+\contentsline {section}{\numberline {5.1}Architektur und Systemübersicht}{10}{}%
+\contentsline {subsection}{\numberline {5.1.1}Das Client-Server-Modell}{10}{}%
+\contentsline {subsection}{\numberline {5.1.2}Kommunikationsprotokoll}{10}{}%
+\contentsline {subsection}{\numberline {5.1.3}Datenfluss}{10}{}%
+\contentsline {section}{\numberline {5.2}Server-Hardware und Betriebsumgebung}{11}{}%
+\contentsline {subsection}{\numberline {5.2.1}Hardware-Basis}{11}{}%
+\contentsline {subsection}{\numberline {5.2.2}Ressourcenbelastung und Netzwerkanbindung}{11}{}%
+\contentsline {subsection}{\numberline {5.2.3}Betriebssystem und Programmiersprache}{11}{}%
+\contentsline {section}{\numberline {5.3}Server-Side: Das Backend}{11}{}%
+\contentsline {subsection}{\numberline {5.3.1}Netzwerk und Verbindungsmanagement}{11}{}%
+\contentsline {subsection}{\numberline {5.3.2}Datenpersistenz und Datenbank}{11}{}%
+\contentsline {subsection}{\numberline {5.3.3}Sicherheit und Authentifizierung auf Serverseite}{11}{}%
+\contentsline {section}{\numberline {5.4}Clientside: Benutzeroberfläche und Client-Logik}{11}{}%
+\contentsline {subsection}{\numberline {5.4.1}Verbindungsaufbau}{11}{}%
+\contentsline {subsection}{\numberline {5.4.2}Asynchrone Nachrichtenverarbeitung}{11}{}%
+\contentsline {subsection}{\numberline {5.4.3}Kryptographie und Datenintegrität}{11}{}%
+\contentsline {section}{\numberline {5.5}Zusammenfassung}{11}{}%
+\contentsline {chapter}{\numberline {6}Metadaten in unserem Programm}{12}{}%
+\contentsline {chapter}{\numberline {7}Reflexion}{13}{}%
+\contentsline {chapter}{\numberline {8}Future Work}{14}{}%
+\contentsline {chapter}{\numberline {9}Fazit}{15}{}%
+\contentsline {chapter}{Abbildungsverzeichnis}{16}{}%
+\contentsline {chapter}{Quellenverzeichnis}{17}{}%

@@ -3,8 +3,8 @@
 \section{Architektur und Systemübersicht}
 
 \subsection{Das Client-Server-Modell}
-Für unseren Ansatz eines Messengers haben wir uns aus praktischen Gründen für ein Client-Server-Modell entschieden. Da die meisten modernen 
-Messenger ebenfalls so funktionieren hatten wir somit Zugang zu vielen Informationen von bereits funktionierenden Systemen und konnten schon 
+Für unseren Ansatz eines Messengers haben wir uns, aus praktischen Gründen, für ein Client-Server-Modell entschieden. Da die meisten modernen 
+Messenger ebenfalls so funktionieren hatten wir Zugang zu vielen Informationen von bereits funktionierenden Systemen und konnten schon 
 bestehende Hardware weiter nutzen.
 
 
@@ -14,7 +14,7 @@ Geräten mithilfe von IP-Adressen und Ports. Das zugrundeliegende Kommunikations
 TCB (Transmission Control Block). In diesem sind wichtige Informationen gespeichert, unter anderem die IP-Adresse und der Port des Partner 
 Sockets, den Verbindungsstatus (z. B. verbunden, wartend, geschlossen), welche Daten noch gesendet oder gelesen werden müssen und die Sequence 
 Numbers, welche die Reihenfolge der empfangenen und versendeten Bytes festhalten. Dieser Aspekt ist für unsere Anwendung entscheidend: Durch den 
-Abgleich der Sequence Numbers und Bestätigungspakete garantiert TCP, dass die Daten vollständig, fehlerfrei und in der korrekten Abfolge ankommen.  
+Abgleich der Sequence Numbers und Bestätigungspakete garantiert TCP, dass die Daten vollständig, fehlerfrei und in der korrekten Abfolge ankommen~\cite{rfc9293}.  
 
 \subsection{Datenfluss}
 Sobald jemand eine Nachricht versendet, erstellt der Client eine TCP-Verbindung zum Server und authentifiziert sich. Dann wird die Nachricht
