@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import ttk
 from time import *
+from socket_client import *
 #import whatever for functions to work
 
 def open_menu():
@@ -159,11 +160,14 @@ def sign_up_if(new_password, invite_code):
         return
     signup_status = sign_up(new_password, invite_code)
     if signup_status == 1 :
+        login_entry.delete(0, END)
+        login_entry.insert(0, str(get_last_created_uid()))
         signup_window.grid_forget()
         success_window.grid(column=0, row=0)
         npassword_entry.delete(0,END)
         invite_entry.delete(0,END)
         root.after(2500, finish_signup)
+        
     elif signup_status == 2 and attempts < 1:
         no_cridentials.grid_forget()
         bad_invite.grid(column=0,row=8, columnspan=2)
@@ -194,7 +198,7 @@ def tologin():
     root.bind('<Return>', lambda event: login_button.invoke())
 
 def send_message_if(outgoing_message, recipient):
-    if chat_entry.get() == "" or open_chat_uid.get == "" :
+    if chat_entry.get() == "" or open_chat_uid.get() == "" :
         chat_entry.focus()
         return
     else :
@@ -413,5 +417,17 @@ logindata = is_loggedin()
 if logindata[0] == 1 :
     number, uid, password = logindata
     check_login_if(uid, password)
+
+def refresh_chat_list():
+    for child in chat_list.winfo_children():
+        if isinstance(child, ttk.Button):
+            child.destroy()
+    build_chats()
+
+register_ui_callbacks(
+    get_active_uid=lambda: open_chat_uid.get(),
+    on_message=lambda msg: root.after(0, lambda: load_new_message_if(msg)),
+    on_new_chat=lambda: root.after(0, refresh_chat_list)
+)
 
 root.mainloop()
