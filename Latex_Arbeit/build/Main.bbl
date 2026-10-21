@@ -19,6 +19,40 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global/global}
+    \entry{rfc9293}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=f7a3476812a86a72d61e6e4dc13021ec}{%
+           family={Eddy},
+           familyi={E\bibinitperiod},
+           given={Wesley\bibnamedelima M.},
+           giveni={W\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Internet Engineering Task Force (IETF)}%
+      }
+      \strng{namehash}{f7a3476812a86a72d61e6e4dc13021ec}
+      \strng{fullhash}{f7a3476812a86a72d61e6e4dc13021ec}
+      \strng{fullhashraw}{f7a3476812a86a72d61e6e4dc13021ec}
+      \strng{bibnamehash}{f7a3476812a86a72d61e6e4dc13021ec}
+      \strng{authorbibnamehash}{f7a3476812a86a72d61e6e4dc13021ec}
+      \strng{authornamehash}{f7a3476812a86a72d61e6e4dc13021ec}
+      \strng{authorfullhash}{f7a3476812a86a72d61e6e4dc13021ec}
+      \strng{authorfullhashraw}{f7a3476812a86a72d61e6e4dc13021ec}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{9293}
+      \field{title}{Transmission Control Protocol (TCP)}
+      \field{type}{RFC}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://www.rfc-editor.org/rfc/rfc9293
+      \endverb
+      \verb{url}
+      \verb https://www.rfc-editor.org/rfc/rfc9293
+      \endverb
+    \endentry
     \entry{so_canvas}{online}{}{}
       \name{author}{1}{}{%
         {{hash=a9b490c17332bb9e149ece317522e896}{%
@@ -216,6 +250,43 @@
       \verb https://tex.stackexchange.com/questions/459640/implementing-biber-for-biblatex-in-microsoft-visual-studio-code
       \endverb
     \endentry
+    \entry{eff_metadata}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=61e95dfa70ce109e6955a6e6f8e22fe1}{%
+           family={Opsahl},
+           familyi={O\bibinitperiod},
+           given={Kurt},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Electronic Frontier Foundation (EFF)}%
+      }
+      \strng{namehash}{61e95dfa70ce109e6955a6e6f8e22fe1}
+      \strng{fullhash}{61e95dfa70ce109e6955a6e6f8e22fe1}
+      \strng{fullhashraw}{61e95dfa70ce109e6955a6e6f8e22fe1}
+      \strng{bibnamehash}{61e95dfa70ce109e6955a6e6f8e22fe1}
+      \strng{authorbibnamehash}{61e95dfa70ce109e6955a6e6f8e22fe1}
+      \strng{authornamehash}{61e95dfa70ce109e6955a6e6f8e22fe1}
+      \strng{authorfullhash}{61e95dfa70ce109e6955a6e6f8e22fe1}
+      \strng{authorfullhashraw}{61e95dfa70ce109e6955a6e6f8e22fe1}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Why Metadata Matters}
+      \field{urlday}{15}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2013}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.eff.org/deeplinks/2013/06/why-metadata-matters
+      \endverb
+      \verb{url}
+      \verb https://www.eff.org/deeplinks/2013/06/why-metadata-matters
+      \endverb
+    \endentry
     \entry{overleaf_bibliography}{online}{}{}
       \name{author}{1}{}{%
         {{hash=80d685e90fa23d7996a66e45aa2d24ad}{%
@@ -377,6 +448,98 @@
       \endverb
       \verb{url}
       \verb https://stackoverflow.com/questions/12400256/converting-epoch-time-into-the-datetime
+      \endverb
+    \endentry
+    \entry{schneier2015data}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=d8df23ab843a37bf97ea40354db74d15}{%
+           family={Schneier},
+           familyi={S\bibinitperiod},
+           given={Bruce},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {W. W. Norton \& Company}%
+      }
+      \strng{namehash}{d8df23ab843a37bf97ea40354db74d15}
+      \strng{fullhash}{d8df23ab843a37bf97ea40354db74d15}
+      \strng{fullhashraw}{d8df23ab843a37bf97ea40354db74d15}
+      \strng{bibnamehash}{d8df23ab843a37bf97ea40354db74d15}
+      \strng{authorbibnamehash}{d8df23ab843a37bf97ea40354db74d15}
+      \strng{authornamehash}{d8df23ab843a37bf97ea40354db74d15}
+      \strng{authorfullhash}{d8df23ab843a37bf97ea40354db74d15}
+      \strng{authorfullhashraw}{d8df23ab843a37bf97ea40354db74d15}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-393-24481-6}
+      \field{title}{Data and Goliath: The Hidden Battles to Collect Your Data and Control Your World}
+      \field{year}{2015}
+    \endentry
+    \entry{buepf_ch}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=d6b1917073bfd250faee466ecbe46174}{%
+           family={{Schweizerische Bundeskanzlei}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{d6b1917073bfd250faee466ecbe46174}
+      \strng{fullhash}{d6b1917073bfd250faee466ecbe46174}
+      \strng{fullhashraw}{d6b1917073bfd250faee466ecbe46174}
+      \strng{bibnamehash}{d6b1917073bfd250faee466ecbe46174}
+      \strng{authorbibnamehash}{d6b1917073bfd250faee466ecbe46174}
+      \strng{authornamehash}{d6b1917073bfd250faee466ecbe46174}
+      \strng{authorfullhash}{d6b1917073bfd250faee466ecbe46174}
+      \strng{authorfullhashraw}{d6b1917073bfd250faee466ecbe46174}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{SR 780.1}
+      \field{title}{Bundesgesetz betreffend die Überwachung des Post- und Fernmeldeverkehrs (BÜPF), Art. 8: Randdaten}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://www.fedlex.admin.ch/eli/cc/2018/31/de
+      \endverb
+      \verb{url}
+      \verb https://www.fedlex.admin.ch/eli/cc/2018/31/de
+      \endverb
+    \endentry
+    \entry{rfc4949}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=ef2b88819a8f4798f0cedcfafc7755d4}{%
+           family={Shirey},
+           familyi={S\bibinitperiod},
+           given={Robert\bibnamedelima W.},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Internet Engineering Task Force (IETF)}%
+      }
+      \strng{namehash}{ef2b88819a8f4798f0cedcfafc7755d4}
+      \strng{fullhash}{ef2b88819a8f4798f0cedcfafc7755d4}
+      \strng{fullhashraw}{ef2b88819a8f4798f0cedcfafc7755d4}
+      \strng{bibnamehash}{ef2b88819a8f4798f0cedcfafc7755d4}
+      \strng{authorbibnamehash}{ef2b88819a8f4798f0cedcfafc7755d4}
+      \strng{authornamehash}{ef2b88819a8f4798f0cedcfafc7755d4}
+      \strng{authorfullhash}{ef2b88819a8f4798f0cedcfafc7755d4}
+      \strng{authorfullhashraw}{ef2b88819a8f4798f0cedcfafc7755d4}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{4949}
+      \field{title}{Internet Security Glossary, Version 2}
+      \field{type}{RFC}
+      \field{year}{2007}
+      \verb{urlraw}
+      \verb https://www.rfc-editor.org/rfc/rfc4949
+      \endverb
+      \verb{url}
+      \verb https://www.rfc-editor.org/rfc/rfc4949
       \endverb
     \endentry
     \entry{tkdocs_tutorial}{online}{}{}
