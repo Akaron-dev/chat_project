@@ -304,6 +304,9 @@ bad_invite = ttk.Label(signup_window, text="Invalid invite code", font=("TkDefau
 no_cridentials = ttk.Label(signup_window, text="Enter invite code and password", font=("TkDefault", 8, "bold"), foreground="red",anchor=CENTER)
 success_window = ttk.Frame(login_frame, width=500, borderwidth=1, relief="solid", padding= 4)
 ttk.Label(success_window, text="Sign Up Successfull", font=("TkDefault", 22, "bold"), foreground="Green",anchor=CENTER).grid(row=0,column=0)
+ttk.Label(success_window, text="This is your UID, it is used to log in.", font=("TkDefault", 22, "bold"),anchor=CENTER).grid(row=0,column=1)
+ttk.Label(success_window, text="Please save it.", font=("TkDefault", 22, "bold"),anchor=CENTER).grid(row=0,column=2)
+ttk.Label(success_window, text="UID: " + str(get_last_created_uid()), font=("TkDefault", 22, "bold"),anchor=CENTER).grid(row=0,column=3)
 
 #Changable Button
 Option_button = ttk.Button(mainframe, text="Options", command=open_menu)
