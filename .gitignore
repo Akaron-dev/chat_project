@@ -1,0 +1,38 @@
+# Client databases and sessions generated at runtime
+client_*.db
+session.json
+
+# SQLite temporary and journal files
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# LaTeX build outputs and temporary files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.lof
+*.lot

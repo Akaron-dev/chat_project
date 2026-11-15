@@ -7,7 +7,7 @@ import sqlite3
 active_clients = {}
 
 def run_server():
-    host_ip = '127.0.0.1'
+    host_ip = '0.0.0.0'
     host_port = 7567
     try:
         server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
