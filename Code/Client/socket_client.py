@@ -1,4 +1,5 @@
 import socket
+import ssl
 import threading
 import json
 import time
@@ -14,6 +15,32 @@ import RSA
 
 SERVER_IP = '127.0.0.1'
 SERVER_PORT = 7567
+USE_TLS = (SERVER_PORT in (443, 8443, 10000))
+
+# Optional override via server_config.json if present
+CONFIG_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "server_config.json")
+if os.path.exists(CONFIG_PATH):
+    try:
+        with open(CONFIG_PATH, "r", encoding="utf-8") as f:
+            _cfg = json.load(f)
+            SERVER_IP = _cfg.get("host", SERVER_IP)
+            SERVER_PORT = int(_cfg.get("port", SERVER_PORT))
+            USE_TLS = _cfg.get("use_tls", SERVER_PORT in (443, 8443, 10000))
+    except Exception:
+        pass
+
+SERVER_IP = SERVER_IP  # Backward-compatibility alias
+
+def create_connection(): # Creates and returns a connected socket to SERVER_IP:SERVER_PORT. When USE_TLS is True (required for Tailscale Funnel on ports 443/8443/10000), wraps the socket in TLS with Server Name Indication (SNI).
+    raw_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    if USE_TLS:
+        context = ssl.create_default_context()
+        sock = context.wrap_socket(raw_sock, SERVER_IPname=SERVER_IP)
+        sock.connect((SERVER_IP, SERVER_PORT))
+        return sock
+    else:
+        raw_sock.connect((SERVER_IP, SERVER_PORT))
+        return raw_sock
 
 VALID_INVITE_CODES = None # When set to None, any invite code is valid. Otherwise, only the codes in this list are valid.
 
@@ -408,8 +435,7 @@ def check_login(own_uid, own_password): # Called by Interface.check_login_if(own
     logout()  # Clean up any leftover connection
 
     try:
-        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        sock.connect((SERVER_IP, SERVER_PORT))
+        sock = create_connection()
 
         auth_payload = {
             "msg_type": 0,
@@ -480,8 +506,7 @@ def sign_up(new_password, invite_code): # Called by Interface.sign_up_if(new_pas
             return 2
 
     try:
-        temp_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        temp_sock.connect((SERVER_IP, SERVER_PORT))
+        temp_sock = create_connection()
 
         signup_payload = {
             "msg_type": 0,
